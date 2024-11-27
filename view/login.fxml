@@ -17,7 +17,6 @@
             <Hyperlink layoutX="212.0" layoutY="220.0" text="Esqueci minha senha" />
          </children>
       </AnchorPane>
-      <HBox prefHeight="118.0" prefWidth="1286.0" style="-fx-background-color: #2C3E50;" />
       <TextField layoutX="513.0" layoutY="263.0" prefHeight="50.0" prefWidth="256.0" promptText="Login">
          <cursor>
             <Cursor fx:constant="TEXT" />
