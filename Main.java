@@ -17,7 +17,7 @@ public class Main extends Application{
       primaryStage.getIcons().add(new Image("/img/icon.png"));                            
       primaryStage.setTitle("Bibliotech"); 
       primaryStage.setResizable(false);         
-      primaryStage.setScene(new Scene(root));         
+      primaryStage.setScene(new Scene(root, 1280, 720));         
       primaryStage.show();          
       primaryStage.sizeToScene();  
       primaryStage.setOnCloseRequest(e -> {System.exit(0);}); 
