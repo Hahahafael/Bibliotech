@@ -1,0 +1,24 @@
+.button {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-padding: 5px 15px; /* Diminui o padding */
+    -fx-font-size: 12px; /* Reduz o tamanho da fonte */
+    -fx-font-family: 'Ek Mukta';
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px; /* Borda arredondada, menor */
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 3);
+    -fx-min-width: 80px; /* Largura mínima menor */
+    -fx-min-height: 30px; /* Altura mínima menor */
+}
+
+.button:hover {
+    -fx-background-color: #34495e; /* Tom mais claro no hover */
+    -fx-cursor: pointer;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: #1a252f; /* Tom mais escuro ao clicar */
+    -fx-effect: none; /* Remove sombra ao clicar */
+}

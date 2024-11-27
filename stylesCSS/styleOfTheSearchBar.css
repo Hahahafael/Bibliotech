@@ -1,0 +1,26 @@
+.text-field {
+    -fx-background-color: #FAFCFD;
+    -fx-text-fill: #333;
+    -fx-padding: 10px;
+    -fx-border-color: transparent; /* Garante que a borda seja invisível por padrão */
+    -fx-border-width: 3px;
+    -fx-font-family: 'Ek Mukta';
+    -fx-font-size: 13px; /* Tamanho do texto */
+    -fx-font-weight: 600;
+    -fx-prompt-text-fill: #aaa;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); /* Sombra igual */
+    -fx-background-radius: 20px 0px 0px 20px; /* Borda esquerda arredondada */
+}
+
+.text-field:hover {
+    -fx-background-color: #dddddd;
+    -fx-text-fill: #000;
+    -fx-cursor: pointer;
+}
+
+.text-field:focused {
+    -fx-background-color: #dddddd;
+    -fx-text-fill: #000;
+    -fx-border-color: transparent; /* Mantém a borda invisível quando focada */
+    -fx-border-width: 3px; /* Pode ajustar a espessura da borda, mas ela permanece invisível */
+}
