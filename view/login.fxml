@@ -7,17 +7,16 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
       <AnchorPane layoutX="441.0" layoutY="187.0" prefHeight="492.0" prefWidth="406.0" style="-fx-background-color: #ECF0F1;">
          <children>
             <Hyperlink layoutX="212.0" layoutY="220.0" text="Esqueci minha senha" />
          </children>
       </AnchorPane>
-      <HBox layoutY="-4.0" prefHeight="118.0" prefWidth="1282.0" style="-fx-background-color: #2C3E50;" />
       <TextField layoutX="513.0" layoutY="263.0" prefHeight="50.0" prefWidth="256.0" promptText="Login">
          <cursor>
             <Cursor fx:constant="TEXT" />
@@ -58,5 +57,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
    </children>
 </AnchorPane>
