@@ -13,10 +13,13 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
    <children>
       <!-- Barra de pesquisa -->
-      <TextField layoutX="408.0" layoutY="286.0" prefHeight="45.0" prefWidth="434.0" promptText="Busque por palavra-chave" stylesheets="@/styles/styleOfTheSearchBar.css" />
+      <TextField layoutX="408.0" layoutY="286.0" prefHeight="45.0" prefWidth="434.0" promptText="Busque por palavra-chave" stylesheets="@../styles/styleOfTheSearchBar.css">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
       
       <!-- Botão de buscar -->
-      <Button layoutX="841.0" layoutY="286.0" minHeight="39.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" stylesheets="@/styles/styleOFTheSearchButton.css" text="Buscar" textFill="WHITE">
+      <Button layoutX="841.0" layoutY="286.0" minHeight="39.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" stylesheets="@../styles/styleOFTheSearchButton.css" text="Buscar" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -36,10 +39,16 @@
       </Button>
       
       <!-- Caixa de seleção -->
-      <ChoiceBox layoutX="414.0" layoutY="244.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" stylesheets="@/styles/styleChoiceBar.css" />
+      <ChoiceBox layoutX="417.0" layoutY="240.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" stylesheets="@../styles/styleChoiceBar.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
       
       <!-- Botão de ajuda -->
-      <Button layoutX="851.0" layoutY="245.0" minHeight="15.0" minWidth="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" stylesheets="@/styles/styleOfHelpButton.css" text="Ajuda" textFill="WHITE" />
+      <Button layoutX="851.0" layoutY="245.0" minHeight="15.0" minWidth="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" stylesheets="@../styles/styleOfHelpButton.css" text="Ajuda" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       
       <!-- ScrollPane -->
       <ScrollPane layoutX="384.0" layoutY="360.0" prefHeight="320.0" prefWidth="585.0" visible="false">
