@@ -11,7 +11,6 @@
 
 .choice-box:hover {
     -fx-background-color: #dddddd;
-    -fx-cursor: pointer;
 }
 
 .choice-box .list-cell {

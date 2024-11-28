@@ -1,31 +1,30 @@
-/* Estilo para o botão */
 .button {
-    -fx-background-color: #FAFCFD; /* Cor de fundo clara */
-    -fx-text-fill: #dddddd; /* Cor do texto */
-    -fx-padding: 10px; /* Espaçamento interno */
-    -fx-border-color: transparent; /* Garante que a borda nunca apareça */
-    -fx-border-width: 0px; /* Borda sem espessura */
-    -fx-font-family: 'Ek Mukta'; /* Fonte */
-    -fx-font-size: 14px; /* Tamanho do texto */
+    -fx-background-color: #FAFCFD; 
+    -fx-text-fill: #dddddd; 
+    -fx-padding: 10px; 
+    -fx-border-color: transparent; 
+    -fx-border-width: 0px; 
+    -fx-font-family: 'Ek Mukta'; 
+    -fx-font-size: 14px; 
     -fx-font-weight: 600;
-    -fx-background-radius: 15px; /* Bordas arredondadas */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); /* Sombra suave para profundidade */
-    -fx-cursor: pointer; /* Cursor em forma de mão */
+    -fx-background-radius: 15px; 
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); 
+    
 }
 
-/* Efeito de hover (quando o mouse passa sobre o botão) */
+
 .button:hover {
-    -fx-background-color: #f5f5f5; /* Cor de fundo mais clara ao passar o mouse */
-    -fx-border-color: transparent; /* Borda invisível ao passar o mouse */
-    -fx-text-fill: #dddddd; /* Cor do texto ao passar o mouse */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 5); /* Sombra mais forte ao passar o mouse */
+    -fx-background-color: #f5f5f5; 
+    -fx-border-color: transparent; 
+    -fx-text-fill: #dddddd; 
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 5); 
 }
 
-/* Efeito de foco (quando o botão é clicado) */
+
 .button:focused {
-    -fx-background-color: #fff; /* Cor de fundo clara quando em foco */
-    -fx-text-fill: #dddddd; /* Cor do texto */
-    -fx-border-color: transparent; /* Sem borda ao focar */
-    -fx-border-width: 0px; /* Sem borda ao focar */
-    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.5), 5, 0, 0, 5); /* Sombra azul quando em foco */
+    -fx-background-color: #fff; 
+    -fx-text-fill: #dddddd; 
+    -fx-border-color: transparent; 
+    -fx-border-width: 0px; 
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.5), 5, 0, 0, 5); 
 }

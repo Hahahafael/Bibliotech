@@ -5,16 +5,15 @@
     -fx-font-size: 14px;
     -fx-font-family: 'Ek Mukta';
     -fx-font-weight: bold;
-    -fx-background-radius: 0px 20px 20px 0px; /* Borda direita arredondada */
+    -fx-background-radius: 0px 20px 20px 0px; 
     -fx-border-radius: 0px 20px 20px 0px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); /* Sombra igual à da TextField */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); 
     -fx-min-width: 100px;
     -fx-min-height: 40px;
 }
 
 .button:hover {
     -fx-background-color: #34495e;
-    -fx-cursor: pointer;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0, 0, 3);
 }
 

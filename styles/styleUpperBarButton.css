@@ -11,11 +11,11 @@
 }
 
 .button:hover {
-    -fx-background-color: #34495e; /* Tom mais claro no hover */
-    -fx-cursor: pointer;
+    -fx-background-color: #34495e; 
+    
 }
 
 .button:pressed {
-    -fx-background-color: #1a252f; /* Tom mais escuro ao clicar */
+    -fx-background-color: #1a252f; 
     -fx-effect: none;
 }
