@@ -12,7 +12,7 @@
    <children>
       <AnchorPane layoutX="441.0" layoutY="187.0" prefHeight="492.0" prefWidth="406.0" style="-fx-background-color: #ECF0F1;">
          <children>
-            <Button layoutX="80.0" layoutY="400.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="266.0" style="-fx-background-color: #2C3E50;" stylesheets="@../styles/styleOfLoginButtons.css" text="Registrar" textFill="WHITE">
+            <Button layoutX="80.0" layoutY="400.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="266.0" style="-fx-background-color: #2C3E50;" stylesheets="@../styles/styleOfButtons.css" text="Registrar" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
@@ -20,34 +20,34 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <PasswordField layoutX="80.0" layoutY="330.0" prefHeight="54.0" prefWidth="259.0" promptText="Insira a senha novamente" stylesheets="@../styles/styleOfLoginTextBar.css">
+            <PasswordField layoutX="80.0" layoutY="330.0" prefHeight="54.0" prefWidth="259.0" promptText="Insira a senha novamente" stylesheets="@../styles/styleOfTextBar.css">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </PasswordField>
-            <TextField layoutX="82.0" layoutY="48.0" prefHeight="50.0" prefWidth="256.0" promptText="Nome" stylesheets="@../styles/styleOfLoginTextBar.css">
+            <TextField layoutX="82.0" layoutY="48.0" prefHeight="50.0" prefWidth="256.0" promptText="Nome" stylesheets="@../styles/styleOfTextBar.css">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField layoutX="80.0" layoutY="117.0" prefHeight="50.0" prefWidth="256.0" promptText="Email" stylesheets="@../styles/styleOfLoginTextBar.css">
+            <TextField layoutX="80.0" layoutY="117.0" prefHeight="50.0" prefWidth="256.0" promptText="Email" stylesheets="@../styles/styleOfTextBar.css">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField layoutX="80.0" layoutY="190.0" prefHeight="50.0" prefWidth="256.0" promptText="Telefone" stylesheets="@../styles/styleOfLoginTextBar.css">
+            <TextField layoutX="80.0" layoutY="190.0" prefHeight="50.0" prefWidth="256.0" promptText="Telefone" stylesheets="@../styles/styleOfTextBar.css">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <PasswordField layoutX="79.0" layoutY="260.0" prefHeight="54.0" prefWidth="259.0" promptText="Senha" stylesheets="@../styles/styleOfLoginTextBar.css">
+            <PasswordField layoutX="79.0" layoutY="260.0" prefHeight="54.0" prefWidth="259.0" promptText="Senha" stylesheets="@../styles/styleOfTextBar.css">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </PasswordField>
          </children>
       </AnchorPane>
-      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToHomeScreen" prefHeight="54.0" prefWidth="101.0" style="-fx-background-color: #2C3E50;" stylesheets="@../styles/styleOfLoginButtons.css" text="Voltar" textFill="WHITE">
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToHomeScreen" prefHeight="54.0" prefWidth="101.0" style="-fx-background-color: #2C3E50;" stylesheets="@../styles/styleOfButtons.css" text="Voltar" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>

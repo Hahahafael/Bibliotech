@@ -64,7 +64,7 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="350.0" layoutY="210.0" text="Editora">
+            <Label layoutX="350.0" layoutY="210.0" text="Instituição">
                <font>
                   <Font size="18.0" />
                </font>
@@ -126,17 +126,17 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="60.0" layoutY="210.0" text="Edição">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="135.0" layoutX="113.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+            <ImageView fitHeight="118.0" fitWidth="91.0" layoutX="123.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="166.0" layoutY="73.0" mnemonicParsing="false" text="Button" />
+            <Label layoutX="60.0" layoutY="210.0" text="Orientador">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="135.0" layoutX="113.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-            <ImageView fitHeight="118.0" fitWidth="91.0" layoutX="123.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
-            <Button layoutX="166.0" layoutY="73.0" mnemonicParsing="false" text="Button" />
          </children>
       </AnchorPane>
-      <Label layoutX="499.0" layoutY="116.0" text="CADASTRO DE LIVROS">
+      <Label layoutX="469.0" layoutY="106.0" text="CADASTRO DE MONOGRAFIA">
          <font>
             <Font size="33.0" />
          </font>

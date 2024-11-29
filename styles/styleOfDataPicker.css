@@ -1,0 +1,62 @@
+.date-picker .text-field {
+    -fx-background-color: #FAFCFD; 
+    -fx-text-fill: #333; 
+    -fx-padding: 10px; 
+    -fx-border-color: transparent; 
+    -fx-border-width: 0px; 
+    -fx-font-family: 'Ek Mukta'; 
+    -fx-font-size: 14px; 
+    -fx-font-weight: 600; 
+    -fx-prompt-text-fill: #aaa; 
+    -fx-background-radius: 15px; 
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); 
+}
+
+.date-picker .text-field:hover {
+    -fx-background-color: #f5f5f5; 
+    -fx-border-color: transparent; 
+    -fx-text-fill: #000; 
+    -fx-cursor: text; 
+}
+
+.date-picker .text-field:focused {
+    -fx-background-color: #fff; 
+    -fx-text-fill: #000; 
+    -fx-border-color: transparent; 
+    -fx-border-width: 2px; 
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.5), 5, 0, 0, 5); 
+}
+
+
+.date-picker .text-field:focused:-fx-prompt-text-fill {
+    -fx-prompt-text-fill: #3498db; 
+}
+
+
+.date-picker {
+    -fx-background-color: transparent; 
+    -fx-background-radius: 15px; 
+    -fx-padding: 0; 
+    -fx-border-color: transparent; 
+    -fx-border-width: 0px;
+}
+
+.date-picker-popup {
+    -fx-background-color: #FAFCFD; 
+    -fx-border-color: transparent; 
+    -fx-background-radius: 15px; 
+    -fx-padding: 10px; 
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent; 
+    -fx-background-radius: 0; 
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: transparent; 
+}
+
+.date-picker .arrow-button:focused {
+    -fx-background-color: transparent; 
+}

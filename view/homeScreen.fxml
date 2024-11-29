@@ -34,7 +34,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ChoiceBox>
-      <Button layoutX="851.0" layoutY="245.0" minHeight="15.0" minWidth="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" stylesheets="@../styles/styleOfHelpButton.css" text="Ajuda" textFill="WHITE">
+      <Button layoutX="851.0" layoutY="245.0" minHeight="15.0" minWidth="62.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" stylesheets="@../styles/styleOfButtons.css" text="Ajuda" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
