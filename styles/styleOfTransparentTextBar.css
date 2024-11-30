@@ -1,0 +1,44 @@
+/* Estilo principal para o TextField */
+.text-field {
+    -fx-background-color: transparent; /* Fundo transparente */
+    -fx-border-width: 0 0 2px 0; /* Borda apenas na parte inferior */
+    -fx-border-color: rgba(255, 255, 255, 0.5); /* Cor da borda padrão */
+    -fx-text-fill: rgb(0, 0, 0); /* Cor do texto */
+    -fx-font-size: 16px; /* Tamanho da fonte */
+    -fx-padding: 5px 0 5px 0; /* Espaçamento interno */
+    -fx-font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+}
+
+/* Placeholder (Prompt Text) */
+.text-field:focused:-fx-prompt-text-fill,
+.text-field:-fx-prompt-text-fill {
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.5); /* Placeholder mais suave */
+}
+
+/* Efeito ao focar no campo */
+.text-field:focused {
+    -fx-border-color: #2196f3; /* Cor da borda em foco */
+    -fx-text-fill: white; /* Cor do texto em foco */
+}
+
+/* Efeito de animação para barra inferior */
+.text-field:focused .bar {
+    -fx-background-color: #2196f3; /* Cor da barra em foco */
+    -fx-transform: scaleX(1); /* Expande a barra no foco */
+    -fx-transition: transform 0.3s ease-in-out;
+}
+
+/* Remover estilos de preenchimento automático do Chrome */
+.text-field:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    -webkit-text-fill-color: white;
+}
+
+/* Adiciona a barra inferior decorativa */
+.bar {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-height: 2px;
+    -fx-width: 100%;
+    -fx-transform: scaleX(0);
+    -fx-transition: transform 0.3s ease-in-out;
+}
