@@ -8,7 +8,7 @@ public class Monografia extends Documento{
     private String instituicao;
 
     // Construtor
-    public Monografia(String codigo, String titulo, DateFormat data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria, String editora, int edicao) {
+    public Monografia(String codigo, String titulo, DateFormat data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria, String orientador, String instituicao) {
         super(codigo, titulo, data, capa, numPaginas, idioma, categoria);
         this.orientador = orientador;
         this.instituicao = instituicao;
