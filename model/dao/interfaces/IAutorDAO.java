@@ -1,7 +1,5 @@
 package model.dao.interfaces;
 
-import model.entities.Autor;
-
 public interface IAutorDAO {
 
   String SQL_INSERT = "INSERT INTO Autor (id, nome) VALUES (?, ?)";
