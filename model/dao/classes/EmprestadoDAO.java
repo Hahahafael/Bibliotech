@@ -26,9 +26,9 @@ public class EmprestadoDAO implements IEmprestadoDAO {
       return true;
   }
 
-  @Override
-  public boolean update() {
-      return true;
-  }
+  // @Override
+  // public boolean update() {
+  //     return true;
+  // }
 
 }

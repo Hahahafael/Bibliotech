@@ -13,6 +13,6 @@ public interface IEmprestadoDAO {
   
   public boolean remove();
 
-  public boolean update();
+  // public boolean update();
 
 }
