@@ -1,9 +1,9 @@
 package model.dao.classes;
 
-import model.dao.interfaces.ICategoria;
+import model.dao.interfaces.ICategoriaDAO;
 import model.entities.Categoria;
 
-public class CategoriaDAO implements ICategoria{
+public class CategoriaDAO implements ICategoriaDAO{
   
   private Categoria categoria;
 
