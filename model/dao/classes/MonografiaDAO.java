@@ -1,9 +1,9 @@
 package model.dao.classes;
 
-import model.dao.interfaces.IMonografia;
+import model.dao.interfaces.IMonografiaDAO;
 import model.entities.Monografia;
 
-public class MonografiaDAO implements IMonografia {
+public class MonografiaDAO implements IMonografiaDAO {
   
   private Monografia monografia;
 
