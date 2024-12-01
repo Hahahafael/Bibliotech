@@ -27,4 +27,46 @@ public class ChooseDocumentController {
     window.show();
   }
 
+
+  /**
+   * Changes the current screen to the book registration screen.
+   * 
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the book registration screen.
+   */
+  public void goToBookRegistrationScreen(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/view/bookRegistration.fxml"));
+    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    window.setScene(scene);
+    window.show();
+  }
+
+  /**
+   * Changes the current screen to the ebook registration screen.
+   * 
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the ebook registration screen.
+   */
+  public void goToEbookRegistrationScreen(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/view/ebookRegistration.fxml"));
+    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    window.setScene(scene);
+    window.show();
+  }
+
+  /**
+   * Changes the current screen to the monograph registration screen.
+   * 
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the monograph registration screen.
+   */
+  public void goToMonographRegistrationScreen(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/view/monographRegistration.fxml"));
+    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    window.setScene(scene);
+    window.show();
+  }
 }

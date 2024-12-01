@@ -31,4 +31,18 @@ public class HomeScreenController {
     window.show();
   }
 
+  /**
+   * Changes the current screen to the choose document screen.
+   * 
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the choose document screen.
+   */
+  public void goToChooseDocumentScreen(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/view/chooseDocument.fxml"));
+    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    window.setScene(scene);
+    window.show();
+  }
+
 }
