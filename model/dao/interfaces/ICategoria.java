@@ -2,10 +2,10 @@ package model.dao.interfaces;
 
 public interface ICategoria {
   
-  String SQL_INSERT = "INSERT INTO Autor (id, nome) VALUES (?, ?)";
-  String SQL_ALTER = "UPDATE Autor SET nome = ?, WHERE id = ?";
-  String SQL_DELETE = "DELETE FROM Autor WHERE id = ?";
-  String SQL_SELECT = "SELECT * FROM Autor WHERE id = ?";
+  String SQL_INSERT = "INSERT INTO Categoria (id, nome) VALUES (?, ?)";
+  String SQL_ALTER = "UPDATE Categoria SET nome = ?, WHERE id = ?";
+  String SQL_DELETE = "DELETE FROM Categoria WHERE id = ?";
+  String SQL_SELECT = "SELECT * FROM Categoria WHERE id = ?";
 
   public boolean find();
 
@@ -14,5 +14,5 @@ public interface ICategoria {
   public boolean remove();
 
   public boolean update();
-  
+
 }
