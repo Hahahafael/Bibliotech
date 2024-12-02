@@ -24,8 +24,8 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="400.0" layoutX="27.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
             <ImageView fitHeight="378.0" fitWidth="280.0" layoutX="37.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
             <TextField layoutX="400.0" layoutY="90.0" promptText="Titulo" stylesheets="@../styles/styleOfTransparentTextBar.css" />
-            <TextField layoutX="400.0" layoutY="176.0" promptText="Edicão" stylesheets="@../styles/styleOfTransparentTextBar.css" />
-            <TextField layoutX="400.0" layoutY="226.0" promptText="Editora" stylesheets="@../styles/styleOfTransparentTextBar.css" />
+            <TextField layoutX="400.0" layoutY="176.0" promptText="Edicão ou Orientador" stylesheets="@../styles/styleOfTransparentTextBar.css" />
+            <TextField layoutX="400.0" layoutY="226.0" promptText="Editora ou instituicão " stylesheets="@../styles/styleOfTransparentTextBar.css" />
             <TextField layoutX="400.0" layoutY="276.0" promptText="Data pubilicacão" stylesheets="@../styles/styleOfTransparentTextBar.css" />
             <TextField layoutX="400.0" layoutY="326.0" promptText="Numero de paginas" stylesheets="@../styles/styleOfTransparentTextBar.css" />
             <TextField layoutX="400.0" layoutY="376.0" promptText="Idioma" stylesheets="@../styles/styleOfTransparentTextBar.css" />

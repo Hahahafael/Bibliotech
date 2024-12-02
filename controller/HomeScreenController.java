@@ -9,13 +9,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class HomeScreenController {
   @FXML Button goToLoginScreen;
+  @FXML ImageView imageViewHelp;
+  @FXML Rectangle rectangleHelp;
 
   private Stage window;
   private Scene scene;
+
 
   /**
    * Changes the current screen to the login screen.
@@ -43,6 +48,11 @@ public class HomeScreenController {
     scene = new Scene(root);
     window.setScene(scene);
     window.show();
+  }
+
+  public void showHelpRectangle(ActionEvent event) throws IOException{
+    rectangleHelp.setVisible(!rectangleHelp.isVisible());
+    imageViewHelp.setVisible(!imageViewHelp.isVisible());
   }
 
 }
