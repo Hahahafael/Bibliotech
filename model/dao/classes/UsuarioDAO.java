@@ -16,8 +16,34 @@ public class UsuarioDAO implements IUsuarioDAO {
   }
 
   @Override
-  public boolean find() {
+  public boolean findById() {
+    try{
+      PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_SELECT_BY_ID);
+      ps.setInt(1, usuario.getId());
+
+      ResultSet rs = ps.executeQuery();
+
+      // testa se tem algo em rs
+      if(rs.next()) {
+        usuario.setId(rs.getInt(1));
+        usuario.setNome(rs.getString(2));
+        usuario.setLogin(rs.getString(3));
+        usuario.setSenha(rs.getString(4));
+        usuario.setEmail(rs.getString(5));
+        usuario.setTelefone(rs.getString(6));
+        usuario.setMultaAcumulada(rs.getFloat(7));
+        usuario.setStatusDaConta(rs.getString(8));
+        usuario.setTipo(rs.getString(9));
+        
+        return true;
+      }
       return false;
+      
+    } catch(SQLException e) {
+      System.out.println("Erro ao buscar. Exception: " + e.getMessage());
+    }
+    
+    return false;
   }
 
   @Override

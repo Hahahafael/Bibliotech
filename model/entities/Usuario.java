@@ -37,6 +37,10 @@ float multaAcumulada, String statusDaConta, String tipo) {
         this.senha = senha;
     }
 
+    public Usuario(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
