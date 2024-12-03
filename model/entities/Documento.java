@@ -3,7 +3,7 @@ package model.entities;
 import java.util.Date;
 import java.awt.image.BufferedImage;
 
-public abstract class Documento {
+public class Documento {
     private String codigo;
     private String titulo;
     private Date data;
@@ -20,6 +20,10 @@ public abstract class Documento {
         this.numPaginas = numPaginas;
         this.idioma = idioma;
         this.categoria = categoria;
+    }
+
+    public Documento(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getCodigo() {

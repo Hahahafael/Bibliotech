@@ -15,6 +15,10 @@ public class Ebook extends Documento{
         this.edicao = edicao;
     }
 
+    public Ebook(String codigo) {
+        super(codigo);
+    }
+
     // Getters e setters
     public String getEditora() {
         return editora;

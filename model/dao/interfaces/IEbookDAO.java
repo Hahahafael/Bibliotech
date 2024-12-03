@@ -1,5 +1,7 @@
 package model.dao.interfaces;
 
+import java.io.IOException;
+
 public interface IEbookDAO {
   
   String SQL_INSERT = "INSERT INTO Ebook (edicao, editora, cod_documento) VALUES (?, ?, ?)";
@@ -7,7 +9,7 @@ public interface IEbookDAO {
   String SQL_DELETE = "DELETE FROM Ebook WHERE cod_documento = ?";
   String SQL_SELECT = "SELECT * FROM Ebook WHERE cod_documento = ?";
 
-  public boolean find();
+  public boolean find() throws IOException;
 
   public boolean insert();
   
