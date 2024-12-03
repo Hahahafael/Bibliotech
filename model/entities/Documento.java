@@ -22,6 +22,10 @@ public abstract class Documento {
         this.categoria = categoria;
     }
 
+    public Documento(String codigo) {
+        this.codigo = codigo;
+    }
+
     public String getCodigo() {
         return codigo;
     }
