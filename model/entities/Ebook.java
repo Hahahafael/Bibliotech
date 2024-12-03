@@ -1,6 +1,6 @@
 package model.entities;
 
-import java.text.DateFormat;
+import java.util.Date;
 import java.awt.image.BufferedImage;
 
 
@@ -9,7 +9,7 @@ public class Ebook extends Documento{
     private int edicao;
 
     // Construtor
-    public Ebook(String codigo, String titulo, DateFormat data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria, String editora, int edicao) {
+    public Ebook(String codigo, String titulo, Date data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria, String editora, int edicao) {
         super(codigo, titulo, data, capa, numPaginas, idioma, categoria);
         this.editora = editora;
         this.edicao = edicao;

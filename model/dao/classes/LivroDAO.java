@@ -1,6 +1,10 @@
 package model.dao.classes;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 import model.dao.interfaces.ILivroDAO;
+import model.db.ConnectionFactory;
 import model.entities.Livro;
 
 public class LivroDAO implements ILivroDAO {
@@ -18,7 +22,20 @@ public class LivroDAO implements ILivroDAO {
 
   @Override
   public boolean insert() {
-      return true;
+      try{
+        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
+        ps.setInt(1, livro.getEdicao());
+        ps.setString(2, livro.getEditora());
+        ps.setString(3, livro.getCodigo());
+
+        ps.executeUpdate();
+
+        return true;
+
+      }catch (SQLException e){
+        System.out.println("Erro ao cadastrar. Exception: " + e.getMessage());
+      }
+      return false;
   }
 
   @Override

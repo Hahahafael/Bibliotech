@@ -1,18 +1,18 @@
 package model.entities;
 
-import java.text.DateFormat;
+import java.util.Date;
 import java.awt.image.BufferedImage;
 
 public abstract class Documento {
     private String codigo;
     private String titulo;
-    private DateFormat data;
+    private Date data;
     private BufferedImage capa;
     private int numPaginas;
     private String idioma;
     private Categoria categoria;
 
-    public Documento(String codigo, String titulo, DateFormat data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria) {
+    public Documento(String codigo, String titulo, Date data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.data = data;
@@ -38,11 +38,11 @@ public abstract class Documento {
         this.titulo = titulo;
     }
 
-    public DateFormat getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(DateFormat data) {
+    public void setData(Date data) {
         this.data = data;
     }
 

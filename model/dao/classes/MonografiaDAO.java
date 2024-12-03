@@ -1,6 +1,10 @@
 package model.dao.classes;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 import model.dao.interfaces.IMonografiaDAO;
+import model.db.ConnectionFactory;
 import model.entities.Monografia;
 
 public class MonografiaDAO implements IMonografiaDAO {
@@ -18,7 +22,22 @@ public class MonografiaDAO implements IMonografiaDAO {
 
   @Override
   public boolean insert() {
-      return true;
+      try{
+        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
+        ps.setString(1, monografia.getOrientador());
+        ps.setString(2, monografia.getInstituicao());
+        ps.setString(3, monografia.getCodigo());
+
+        //orientador, instituicao, cod_documento
+
+        ps.executeUpdate();
+
+        return true;
+
+      }catch (SQLException e){
+        System.out.println("Erro ao cadastrar. Exception: " + e.getMessage());
+      }
+      return false;
   }
 
   @Override

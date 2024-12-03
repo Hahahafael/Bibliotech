@@ -1,6 +1,10 @@
 package model.dao.classes;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 import model.dao.interfaces.ICategoriaDAO;
+import model.db.ConnectionFactory;
 import model.entities.Categoria;
 
 public class CategoriaDAO implements ICategoriaDAO {
@@ -18,7 +22,19 @@ public class CategoriaDAO implements ICategoriaDAO {
 
   @Override
   public boolean insert() {
-      return true;
+     try{
+        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
+        ps.setInt(1, categoria.getNumero());
+        ps.setString(2, categoria.getNome());
+
+        ps.executeUpdate();
+
+        return true;
+
+      }catch (SQLException e){
+        System.out.println("Erro ao cadastrar. Exception: " + e.getMessage());
+      }
+      return false;
   }
 
   @Override

@@ -1,6 +1,10 @@
 package model.dao.classes;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 import model.dao.interfaces.IEbookDAO;
+import model.db.ConnectionFactory;
 import model.entities.Ebook;
 
 public class EbookDAO implements IEbookDAO{
@@ -18,7 +22,20 @@ public class EbookDAO implements IEbookDAO{
 
   @Override
   public boolean insert() {
-      return true;
+    try{
+        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
+        ps.setInt(1, ebook.getEdicao());
+        ps.setString(2, ebook.getEditora());
+        ps.setString(3, ebook.getCodigo());
+
+        ps.executeUpdate();
+
+        return true;
+
+      }catch (SQLException e){
+        System.out.println("Erro ao cadastrar. Exception: " + e.getMessage());
+      }
+      return false;
   }
 
   @Override
