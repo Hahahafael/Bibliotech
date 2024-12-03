@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountDetailsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" stylesheets="@../styles/styleOfButtons.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="279.0" layoutY="184.0" prefHeight="492.0" prefWidth="723.0" style="-fx-background-color: #ECF0F1;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="39.0" layoutX="439.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="159.0" layoutX="32.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+            <ImageView fitHeight="142.0" fitWidth="145.0" layoutX="40.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="223.0" layoutX="39.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="649.0" />
+            <Button layoutX="598.0" layoutY="267.0" minHeight="11.0" minWidth="66.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="66.0" stylesheets="@../styles/styleOfButtons.css" text="Editar" />
+            <Button layoutX="125.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" stylesheets="@../styles/styleOfEditButtons.css" text="editar" />
+            <TextField layoutX="135.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField editable="false" layoutX="135.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField layoutX="395.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField layoutX="135.0" layoutY="385.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField layoutX="395.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <Label layoutX="80.0" layoutY="285.0" text="Nome" textFill="WHITE" />
+            <Label layoutX="80.0" layoutY="340.0" text="Login" textFill="WHITE" />
+            <Label layoutX="340.0" layoutY="282.0" text="Senha" textFill="WHITE" />
+            <Label layoutX="80.0" layoutY="395.0" text="Email" textFill="WHITE" />
+            <Label layoutX="334.0" layoutY="340.0" text="Telefone" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

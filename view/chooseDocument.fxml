@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChooseDocumentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <Label layoutX="488.0" layoutY="133.0" text="TIPO DE DOCUMENTO">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" stylesheets="@../styles/styleOfButtons.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="300.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToBookRegistrationScreen" prefHeight="70.0" prefWidth="170.0" stylesheets="@../styles/styleUpperBarButton.css" text="Livro" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="546.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToMonographRegistrationScreen" prefHeight="70.0" prefWidth="228.0" stylesheets="@../styles/styleUpperBarButton.css" text="Monografia" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="845.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToEbookRegistrationScreen" prefHeight="70.0" prefWidth="162.0" stylesheets="@../styles/styleUpperBarButton.css" text="E-book" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

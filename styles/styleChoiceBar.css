@@ -1,0 +1,24 @@
+.choice-box {
+    -fx-font-family: 'Ek Mukta';
+    -fx-text-transform: uppercase;
+    -fx-font-weight: 600;
+    -fx-padding: 1px;
+    -fx-background-color: #FAFCFD;
+    -fx-border-color: transparent;
+    -fx-border-width: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 3);
+}
+
+.choice-box:hover {
+    -fx-background-color: #dddddd;
+}
+
+.choice-box .list-cell {
+    -fx-background-color: #FAFCFD;
+    -fx-text-fill: #333;
+}
+
+.choice-box .list-cell:hover {
+    -fx-background-color: #dddddd;
+    -fx-text-fill: #000;
+}
