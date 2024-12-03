@@ -67,4 +67,8 @@ public class CategoriaDAO implements ICategoriaDAO {
       return true;
   }
 
+  public Categoria getCategoria(){
+    return this.categoria;
+  }
+
 }

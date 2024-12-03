@@ -3,7 +3,7 @@ package model.entities;
 import java.util.Date;
 import java.awt.image.BufferedImage;
 
-public abstract class Documento {
+public class Documento {
     private String codigo;
     private String titulo;
     private Date data;

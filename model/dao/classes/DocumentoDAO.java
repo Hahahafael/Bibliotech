@@ -46,7 +46,12 @@ public class DocumentoDAO implements IDocumentoDAO {
         documento.setData(rs.getDate(4));
         documento.setNumPaginas(rs.getInt(5));
         documento.setIdioma(rs.getString(6));
-        documento.setCategoria(new Categoria(rs.getInt(7)));        
+ 
+        CategoriaDAO categoriaDocumento = new CategoriaDAO(new Categoria(rs.getInt(7)));
+        categoriaDocumento.find();
+        int numeroCategoria = categoriaDocumento.getCategoria().getNumero();
+        String nomeCategoria = categoriaDocumento.getCategoria().getNome();
+        documento.setCategoria(new Categoria(numeroCategoria, nomeCategoria));        
         return true;
       }
       return false;
@@ -95,6 +100,10 @@ public class DocumentoDAO implements IDocumentoDAO {
   @Override
   public boolean update() {
       return true;
+  }
+
+  public Documento getDocumento(){
+    return this.documento;
   }
 
 }
