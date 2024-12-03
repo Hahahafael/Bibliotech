@@ -7,7 +7,6 @@ import java.sql.SQLException;
 
 import model.dao.interfaces.IEbookDAO;
 import model.db.ConnectionFactory;
-import model.entities.Categoria;
 import model.entities.Documento;
 import model.entities.Ebook;
 
