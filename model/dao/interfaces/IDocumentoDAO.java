@@ -9,7 +9,7 @@ public interface IDocumentoDAO {
   String SQL_DELETE = "DELETE FROM Documento WHERE cod_documento = ?";
   String SQL_SELECT = "SELECT * FROM Documento WHERE cod_documento = ?";
 
-  public boolean find();
+  public boolean find() throws IOException;
 
   public boolean insert() throws IOException;
   
