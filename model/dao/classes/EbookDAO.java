@@ -28,8 +28,8 @@ public class EbookDAO implements IEbookDAO{
 
       // testa se tem algo em rs
       if(rs.next()) {
-        ebook.setEditora(rs.getString(1));
-        ebook.setEdicao(rs.getInt(2));
+        ebook.setEdicao(rs.getInt(1));
+        ebook.setEditora(rs.getString(2));
         ebook.setCodigo(rs.getString(3));
         DocumentoDAO documentoEbook = new DocumentoDAO(new Documento(ebook.getCodigo()));
         documentoEbook.find();
