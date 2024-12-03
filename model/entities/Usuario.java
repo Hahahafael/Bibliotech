@@ -32,6 +32,14 @@ float multaAcumulada, String statusDaConta, String tipo) {
         this.telefone = telefone;
     }
 
+    public Usuario(String nome, String email, String telefone, String senha) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.senha = senha;        
+
+    }
+
     public Usuario(String login, String senha) {
         this.login = login;
         this.senha = senha;

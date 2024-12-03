@@ -5,9 +5,13 @@ import java.sql.SQLException;
 
 public class TesteConexao {
 
-    public static void main(String[] args) throws SQLException {
-       Connection conexao = new ConnectionFactory ().getConnection();
-        System.out.println("Conexão aberta!");
-        conexao.close();
+    public static void main(String[] args) {
+        try {
+            Connection conexao = ConnectionFactory.getConnection();
+            System.out.println("Conexão estabelecida com sucesso!");
+            conexao.close();
+        } catch (SQLException e) {
+            System.out.println("Erro ao conectar ao banco de dados: " + e.getMessage());
+        }
     }
 }

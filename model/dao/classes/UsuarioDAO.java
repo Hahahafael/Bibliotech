@@ -54,25 +54,24 @@ public class UsuarioDAO implements IUsuarioDAO {
 
   @Override
   public boolean insert() {
-      try{
-        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
-        ps.setString(1, usuario.getNome());
-        ps.setString(2, usuario.getLogin());
-        ps.setString(3, usuario.getSenha());
-        ps.setString(4, usuario.getEmail());
-        ps.setString(5, usuario.getTelefone());
-        ps.setFloat(6, 0);
-        ps.setString(7, "NULL");
-        ps.setString(8, "NULL");
+    try (PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT)) {
+      ps.setString(1, usuario.getNome());
+      ps.setString(2, usuario.getLogin());
+      ps.setString(3, usuario.getSenha());
+      ps.setString(4, usuario.getEmail());
+      ps.setString(5, usuario.getTelefone());
+      ps.setFloat(6, usuario.getMultaAcumulada());
+      ps.setString(7, usuario.getStatusDaConta());
+      ps.setString(8, usuario.getTipo());
 
-        ps.executeUpdate();
+      ps.executeUpdate();
+      System.out.println("Usuário inserido com sucesso!");
+      return true;
 
-        return true;
-
-      }catch (SQLException e){
-        System.out.println("Erro ao cadastrar. Exception: " + e.getMessage());
-      }
-      return false;
+    } catch (SQLException e) {
+        System.out.println("Erro ao inserir usuário: " + e.getMessage());
+        return false;
+    }
   }
 
   @Override
