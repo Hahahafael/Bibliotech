@@ -14,6 +14,10 @@ public class Monografia extends Documento{
         this.instituicao = instituicao;
     }
 
+    public Monografia(String codigo) {
+        super(codigo);
+    }
+
     // Getters e setters
     public String getOrientador() {
         return orientador;

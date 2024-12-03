@@ -1,6 +1,7 @@
 package model.dao.classes;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.dao.interfaces.ICategoriaDAO;
@@ -17,7 +18,26 @@ public class CategoriaDAO implements ICategoriaDAO {
 
   @Override
   public boolean find() {
+      try{
+      PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_SELECT);
+      ps.setInt(1, categoria.getNumero());
+
+      ResultSet rs = ps.executeQuery();
+
+      // testa se tem algo em rs
+      if(rs.next()) {
+        categoria.setNumero(rs.getInt(1));
+        categoria.setNome(rs.getString(2));
+        
+        return true;
+      }
       return false;
+      
+    } catch(SQLException e) {
+      System.out.println("Erro ao buscar. Exception: " + e.getMessage());
+    }
+    
+    return false;
   }
 
   @Override
@@ -45,6 +65,10 @@ public class CategoriaDAO implements ICategoriaDAO {
   @Override
   public boolean update() {
       return true;
+  }
+
+  public Categoria getCategoria(){
+    return this.categoria;
   }
 
 }

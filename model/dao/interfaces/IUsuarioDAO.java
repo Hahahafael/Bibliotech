@@ -8,7 +8,7 @@ public interface IUsuarioDAO {
   String SQL_SELECT_BY_ID = "SELECT * FROM Usuario WHERE id_usuario = ?";
   String SQL_SELECT_BY_LOGIN = "SELECT * FROM Usuario WHERE login = ? AND senha = ?";
 
-  public boolean find();
+  public boolean findById();
 
   public boolean findByLogin();
 

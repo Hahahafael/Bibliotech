@@ -51,29 +51,4 @@ public class RegisterController {
     window.setScene(scene);
     window.show();
   }
-
-  public void register(ActionEvent event) throws IOException {
-    String nome = NameRegister.getText();
-    String email = EmailRegister.getText();
-    String telefone = PhoneRegister.getText();
-    String senha = PasswordRegister.getText();
-    Usuario novoUsuario = new Usuario(nome, nome, email, telefone, senha);
-    novoUsuario.setLogin(email);
-    novoUsuario.setNome(nome);
-    novoUsuario.setEmail(email);
-    novoUsuario.setTelefone(telefone);
-    novoUsuario.setSenha(senha);
-    novoUsuario.setMultaAcumulada(0); 
-    novoUsuario.setStatusDaConta("Ativa"); 
-    novoUsuario.setTipo("Aluno"); 
-
-    UsuarioDAO usuarioDAO = new UsuarioDAO(novoUsuario);
-    boolean resultado = usuarioDAO.insert();
-
-    if (resultado) {
-      System.out.println("Usuário registrado com sucesso!");
-    } else {
-      System.out.println("Erro ao registrar usuário.");
-    }
-  }
 }
