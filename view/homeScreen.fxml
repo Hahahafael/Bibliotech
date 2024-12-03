@@ -23,7 +23,7 @@
          </cursor>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
-      <Button layoutX="931.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToLoginScreen" prefHeight="96.0" prefWidth="165.0" style="-fx-background-color: #95A5A6;" stylesheets="@/styles/styleUpperBarButton.css" text="Fazer Login" textFill="WHITE">
+      <Button layoutX="899.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToLoginScreen" prefHeight="96.0" prefWidth="165.0" style="-fx-background-color: #95A5A6;" stylesheets="@/styles/styleUpperBarButton.css" text="Fazer Login" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font>
@@ -44,15 +44,15 @@
             <VBox prefHeight="398.0" prefWidth="550.0" />
          </content>
       </ScrollPane>
-      <Button layoutX="653.0" layoutY="33.0" mnemonicParsing="false" onAction="#goToChooseDocumentScreen" prefHeight="52.0" prefWidth="254.0" style="-fx-background-color: #2c3e50;" text="Cadastrar documento" textFill="WHITE">
+      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" visible="false" width="301.0" />
+      <ImageView fx:id="imageViewHelp" fitHeight="505.0" fitWidth="290.0" layoutX="968.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <Button layoutX="1076.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToChooseDocumentScreen" prefHeight="96.0" prefWidth="188.0" style="-fx-background-color: #95A5A6;" stylesheets="@/styles/styleUpperBarButton.css" text="Cadastrar Documento" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" visible="false" width="301.0" />
-      <ImageView fx:id="imageViewHelp" fitHeight="505.0" fitWidth="290.0" layoutX="968.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false" />
    </children>
 </AnchorPane>

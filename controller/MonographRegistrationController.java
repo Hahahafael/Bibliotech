@@ -1,15 +1,24 @@
 package controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class MonographRegistrationController {
+  @FXML ImageView ImageViewMonographRegistration;
+  @FXML Button addPhotoButtonMonographResgistration;
+
   private Stage window;
   private Scene scene;
 
@@ -25,5 +34,16 @@ public class MonographRegistrationController {
     scene = new Scene(root);
     window.setScene(scene);
     window.show();
+  }
+
+  public void selectImage(ActionEvent event) throws IOException {
+    FileChooser fileChooser = new FileChooser();
+    FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Imagens (JPG, PNG, GIF)", "*.jpg", "*.jpeg", "*.png", "*.gif");
+    fileChooser.getExtensionFilters().add(imageFilter);
+    File selectedFile = fileChooser.showOpenDialog(null);
+    if (selectedFile != null) {
+      Image image = new Image(selectedFile.toURI().toString());
+      ImageViewMonographRegistration.setImage(image);
+    }
   }
 }
