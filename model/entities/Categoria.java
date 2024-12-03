@@ -9,6 +9,10 @@ public class Categoria {
         this.nome = nome;
     }
 
+    public Categoria(int numero) {
+        this.numero = numero;
+    }
+
     public int getNumero() {
         return numero;
     }
