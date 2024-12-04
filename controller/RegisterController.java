@@ -71,6 +71,14 @@ public class RegisterController {
 
     if (resultado) {
       System.out.println("Usuário registrado com sucesso!");
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
+      Parent root = loader.load();
+      HomeScreenController homeScreenController = loader.getController();
+      homeScreenController.setLoggedIn(true); 
+      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      scene = new Scene(root);
+      window.setScene(scene);
+      window.show();
     } else {
       System.out.println("Erro ao registrar usuário.");
     }
