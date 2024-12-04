@@ -17,6 +17,7 @@ public class HomeScreenController {
   @FXML Button goToLoginScreen;
   @FXML ImageView imageViewHelp;
   @FXML Rectangle rectangleHelp;
+  @FXML Button accountButton;
 
   private Stage window;
   private Scene scene;
@@ -29,9 +30,11 @@ public class HomeScreenController {
 
   private void updateLoginButtonVisibility() {
     if (isLoggedIn) {
-        goToLoginScreen.setVisible(false);  // Esconde o botão se estiver logado
+        goToLoginScreen.setVisible(false);  
+        accountButton.setVisible(true);
     } else {
-        goToLoginScreen.setVisible(true);   // Exibe o botão se não estiver logado
+        goToLoginScreen.setVisible(true); 
+        accountButton.setVisible(false);
     }
   }
  
@@ -69,4 +72,12 @@ public class HomeScreenController {
       imageViewHelp.setVisible(!imageViewHelp.isVisible());
   }
 
+
+  public void goToAccountScreen(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/view/accountDetails.fxml"));
+    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    window.setScene(scene);
+    window.show();
+  }
 }

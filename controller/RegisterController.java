@@ -57,9 +57,9 @@ public class RegisterController {
     String telefone = PhoneRegister.getText();
     String senha = PasswordRegister.getText();
     Usuario novoUsuario = new Usuario(nome, nome, email, telefone, senha);
-    novoUsuario.setLogin(email);
+    novoUsuario.setLogin(email); // AVISO: DEVEMOS MUDAR ISSO, MAS DEPOIS DE TERMINAR DE PREFERENCIA
     novoUsuario.setNome(nome);
-    novoUsuario.setEmail(email);
+    novoUsuario.setEmail(email); 
     novoUsuario.setTelefone(telefone);
     novoUsuario.setSenha(senha);
     novoUsuario.setMultaAcumulada(0); 

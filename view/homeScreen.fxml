@@ -54,5 +54,13 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Button fx:id="accountButton" layoutX="899.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToAccountScreen" prefHeight="96.0" prefWidth="165.0" style="-fx-background-color: #95A5A6;" stylesheets="@/styles/styleUpperBarButton.css" text="Conta" textFill="WHITE" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>
