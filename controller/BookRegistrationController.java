@@ -16,8 +16,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import model.dao.classes.DocumentoDAO;
 import model.dao.classes.LivroDAO;
 import model.entities.Categoria;
+import model.entities.Documento;
 import model.entities.Livro;
 
 public class BookRegistrationController {
@@ -84,10 +86,17 @@ public class BookRegistrationController {
     int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
     java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue()); // Convertendo para Date
     Categoria categoria = new Categoria(categoryNumber, category);
-    Livro livro = new Livro(code, title, date, null, pages, language, categoria, publisher, edition);
+
+
+    Documento documentoLivro = new Documento(code, title, date, null, pages, language, categoria);
+    DocumentoDAO documentoLivroDAO = new DocumentoDAO(documentoLivro);
+    boolean resultadoDocumento = documentoLivroDAO.insert();
+
+    Livro livro = new Livro(code, publisher, edition);
     LivroDAO livroDAO = new LivroDAO(livro);
-    boolean resultado = livroDAO.insert();
-    if (resultado) {
+    boolean resultadoLivro = livroDAO.insert();
+    
+    if (resultadoDocumento && resultadoLivro) {
       System.out.println("Livro registrado com sucesso!");
       FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
       Parent root = loader.load();
