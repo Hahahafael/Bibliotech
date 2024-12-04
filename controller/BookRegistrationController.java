@@ -83,10 +83,12 @@ public class BookRegistrationController {
     String category = categoryBookRegistration.getText();
     int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
     java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue()); // Convertendo para Date
+
     Categoria categoria = new Categoria(categoryNumber, category);
     Livro livro = new Livro(code, title, date, null, pages, language, categoria, publisher, edition);
     LivroDAO livroDAO = new LivroDAO(livro);
     boolean resultado = livroDAO.insert();
+    
     if (resultado) {
       System.out.println("Livro registrado com sucesso!");
       FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));

@@ -17,6 +17,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import model.dao.classes.MonografiaDAO;
+import model.entities.Categoria;
+import model.entities.Monografia;
 
 public class MonographRegistrationController {
   @FXML ImageView ImageViewMonographRegistration;
@@ -82,21 +85,27 @@ public class MonographRegistrationController {
     String titulo = titleMonograph.getText();
     String orientador = advisorMonograph.getText();
     String instituicao = institutionMonograph.getText();
-    String paginas = pageMonograph.getText();
+    int paginas = Integer.parseInt(pageMonograph.getText());
     String idioma = languageMonograph.getText();
     String categoria = categoryMonograph.getText();
-    String numeroCategoria = categoryNumberMonograph.getText();
-    LocalDate anoDePublicacao = yearOfPublicationMonograph.getValue();
+    int numeroCategoria = Integer.parseInt(categoryNumberMonograph.getText());
+    java.sql.Date anoDePublicacao = java.sql.Date.valueOf(yearOfPublicationMonograph.getValue());
 
-     // Print values to the console for debugging
-     System.out.println("Code: " + codigo);
-     System.out.println("Title: " + titulo);
-     System.out.println("Advisor: " + orientador);
-     System.out.println("Institution: " + instituicao);
-     System.out.println("Pages: " + paginas);
-     System.out.println("Language: " + idioma);
-     System.out.println("Category: " + categoria);
-     System.out.println("Category Number: " + numeroCategoria);
-     System.out.println("Year of Publication: " + anoDePublicacao);
+    Categoria categoriaObj = new Categoria(numeroCategoria, categoria);
+    Monografia monografia = new Monografia(codigo, titulo, anoDePublicacao, null, paginas, idioma, categoriaObj, orientador, instituicao);
+    MonografiaDAO monografiaDAO = new MonografiaDAO(monografia);
+    boolean resultado = monografiaDAO.insert();
+
+    if (resultado) {
+      System.out.println("Monografia registrada com sucesso!");
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
+      Parent root = loader.load();
+      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      scene = new Scene(root);
+      window.setScene(scene);
+      window.show();
+    } else {
+      System.out.println("Erro ao registrar monografia.");
+    }
   }
 }
