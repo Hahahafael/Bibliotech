@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.Session;
 import model.dao.classes.UsuarioDAO;
 import model.entities.Usuario;
 
@@ -63,6 +64,7 @@ public class LoginController {
         UsuarioDAO usuarioDAO = new UsuarioDAO(usuario);
         boolean autenticado = usuarioDAO.findByLogin();
         if (autenticado) {
+            Session.setUsuarioLogado(usuario);
             System.out.println("Login realizado com sucesso!");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
             Parent root = loader.load();

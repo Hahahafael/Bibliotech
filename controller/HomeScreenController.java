@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import model.entities.Usuario;
+import model.Session;
 
 public class HomeScreenController {
     @FXML Button goToLoginScreen;
@@ -23,6 +23,12 @@ public class HomeScreenController {
     private Stage window;
     private Scene scene;
 
+    public void initialize() {
+        if (Session.isUsuarioLogado()) {
+            goToLoginScreen.setVisible(false);
+            accountButton.setVisible(true);
+        }
+    }
 
    /**
    * go to Login Screen
@@ -31,8 +37,8 @@ public class HomeScreenController {
    */
     public void goToLoginScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
-        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         window.setScene(scene);
         window.show();
     }
