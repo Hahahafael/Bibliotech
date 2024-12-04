@@ -47,4 +47,17 @@ public class AccountDetailsController {
     window.setScene(scene);
     window.show();
   }
+
+  /**
+   * go to loan screen
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
+  public void goToLoanScreen(ActionEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/view/loanScreen.fxml"));
+    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
+    window.setScene(scene);
+    window.show();
+  }
 }
