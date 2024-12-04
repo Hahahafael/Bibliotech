@@ -24,7 +24,7 @@ CREATE TABLE Categoria (
 );
 
 CREATE TABLE Documento (
-    cod_documento SERIAL PRIMARY KEY,
+    cod_documento VARCHAR(30) PRIMARY KEY,
     titulo VARCHAR(50) NOT NULL,
     capa BYTEA,
     data_publicacao DATE,
@@ -36,7 +36,7 @@ CREATE TABLE Documento (
 
 CREATE TABLE Recebe (
     id_comentario INT,
-    cod_documento INT,
+    cod_documento VARCHAR(30),
     PRIMARY KEY (id_comentario, cod_documento),
     FOREIGN KEY (id_comentario) REFERENCES Comentario(id_comentario),
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
@@ -48,7 +48,7 @@ CREATE TABLE Autor (
 );
 
 CREATE TABLE Escreve (
-    cod_documento INT,
+    cod_documento VARCHAR(30),
     id_autor INT,
     PRIMARY KEY (cod_documento, id_autor),
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento),
@@ -58,21 +58,21 @@ CREATE TABLE Escreve (
 CREATE TABLE Livro (
     edicao INT,
     editora VARCHAR(20),
-    cod_documento INT PRIMARY KEY,
+    cod_documento VARCHAR(30) PRIMARY KEY,
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
 );
 
 CREATE TABLE Monografia (
     orientador VARCHAR(50),
     instituicao VARCHAR(70),
-    cod_documento INT PRIMARY KEY,
+    cod_documento VARCHAR(30) PRIMARY KEY,
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
 );
 
 CREATE TABLE Ebook (
     edicao INT,
     editora VARCHAR(20),
-    cod_documento INT PRIMARY KEY,
+    cod_documento VARCHAR(30) PRIMARY KEY,
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
 );
 
@@ -89,7 +89,7 @@ CREATE TABLE Emprestimo (
 
 CREATE TABLE Emprestado (
     cod_emprestimo INT,
-    cod_documento INT,
+    cod_documento VARCHAR(30),
     PRIMARY KEY (cod_emprestimo, cod_documento),
     FOREIGN KEY (cod_emprestimo) REFERENCES Emprestimo(cod_emprestimo),
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
