@@ -12,72 +12,74 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import model.entities.Usuario;
 
 public class HomeScreenController {
-  @FXML Button goToLoginScreen;
-  @FXML ImageView imageViewHelp;
-  @FXML Rectangle rectangleHelp;
-  @FXML Button accountButton;
+    @FXML Button goToLoginScreen;
+    @FXML ImageView imageViewHelp;
+    @FXML Rectangle rectangleHelp;
+    @FXML Button accountButton;
 
-  private Stage window;
-  private Scene scene;
-  private boolean isLoggedIn = false;  
+    private Stage window;
+    private Scene scene;
+    private boolean isLoggedIn = false;
+    
+    // Variável global para armazenar o usuário logado
+    private Usuario usuarioLogado;
 
-  public void setLoggedIn(boolean loggedIn) {
-    this.isLoggedIn = loggedIn;
-    updateLoginButtonVisibility(); 
-  }
-
-  private void updateLoginButtonVisibility() {
-    if (isLoggedIn) {
-        goToLoginScreen.setVisible(false);  
-        accountButton.setVisible(true);
-    } else {
-        goToLoginScreen.setVisible(true); 
-        accountButton.setVisible(false);
+    // Método para configurar o usuário logado
+    public void setUsuarioLogado(Usuario usuario) {
+        this.usuarioLogado = usuario;
+        setLoggedIn(true);
     }
-  }
- 
 
-  /**
-   * Changes the current screen to the login screen.
-   * 
-   * @param event the triggered event, usually a click on a button.
-   * @throws IOException if an error occurs while loading the FXML file from the login screen.
-   */
-  public void goToLoginScreen(ActionEvent event) throws IOException {
-      Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
-      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-      scene = new Scene(root);
-      window.setScene(scene);
-      window.show();
-  }
+    // Método para atualizar a visibilidade do botão de login
+    public void setLoggedIn(boolean loggedIn) {
+        this.isLoggedIn = loggedIn;
+        updateLoginButtonVisibility(); 
+    }
 
-  /**
-   * Changes the current screen to the choose document screen.
-   * 
-   * @param event the triggered event, usually a click on a button.
-   * @throws IOException if an error occurs while loading the FXML file from the choose document screen.
-   */
-  public void goToChooseDocumentScreen(ActionEvent event) throws IOException {
-      Parent root = FXMLLoader.load(getClass().getResource("/view/chooseDocument.fxml"));
-      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-      scene = new Scene(root);
-      window.setScene(scene);
-      window.show();
-  }
+    // Atualiza a visibilidade do botão de login
+    private void updateLoginButtonVisibility() {
+        if (isLoggedIn) {
+            goToLoginScreen.setVisible(false);  
+            accountButton.setVisible(true);
+        } else {
+            goToLoginScreen.setVisible(true); 
+            accountButton.setVisible(false);
+        }
+    }
 
-  public void showHelpRectangle(ActionEvent event) throws IOException {
-      rectangleHelp.setVisible(!rectangleHelp.isVisible());
-      imageViewHelp.setVisible(!imageViewHelp.isVisible());
-  }
+    // Redireciona para a tela de login
+    public void goToLoginScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+    }
 
+    // Redireciona para a tela de documentos
+    public void goToChooseDocumentScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/chooseDocument.fxml"));
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+    }
 
-  public void goToAccountScreen(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/view/accountDetails.fxml"));
-    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    scene = new Scene(root);
-    window.setScene(scene);
-    window.show();
-  }
+    // Função para mostrar a ajuda
+    public void showHelpRectangle(ActionEvent event) throws IOException {
+        rectangleHelp.setVisible(!rectangleHelp.isVisible());
+        imageViewHelp.setVisible(!imageViewHelp.isVisible());
+    }
+
+    // Redireciona para a tela da conta
+    public void goToAccountScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/accountDetails.fxml"));
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+    }
 }
