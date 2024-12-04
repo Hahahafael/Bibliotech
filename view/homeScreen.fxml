@@ -23,7 +23,7 @@
          </cursor>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
-      <Button layoutX="899.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToLoginScreen" prefHeight="96.0" prefWidth="165.0" style="-fx-background-color: #95A5A6;" stylesheets="@/styles/styleUpperBarButton.css" text="Fazer Login" textFill="WHITE">
+      <Button fx:id="goToLoginScreen" layoutX="899.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToLoginScreen" prefHeight="96.0" prefWidth="165.0" style="-fx-background-color: #95A5A6;" stylesheets="@/styles/styleUpperBarButton.css" text="Fazer Login" textFill="WHITE">
          <font>
             <Font size="19.0" />
          </font>

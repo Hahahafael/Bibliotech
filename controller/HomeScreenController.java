@@ -20,7 +20,21 @@ public class HomeScreenController {
 
   private Stage window;
   private Scene scene;
+  private boolean isLoggedIn = false;  
 
+  public void setLoggedIn(boolean loggedIn) {
+    this.isLoggedIn = loggedIn;
+    updateLoginButtonVisibility(); 
+  }
+
+  private void updateLoginButtonVisibility() {
+    if (isLoggedIn) {
+        goToLoginScreen.setVisible(false);  // Esconde o botão se estiver logado
+    } else {
+        goToLoginScreen.setVisible(true);   // Exibe o botão se não estiver logado
+    }
+  }
+ 
 
   /**
    * Changes the current screen to the login screen.
@@ -29,11 +43,11 @@ public class HomeScreenController {
    * @throws IOException if an error occurs while loading the FXML file from the login screen.
    */
   public void goToLoginScreen(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
-    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    scene = new Scene(root);
-    window.setScene(scene);
-    window.show();
+      Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
+      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      scene = new Scene(root);
+      window.setScene(scene);
+      window.show();
   }
 
   /**
@@ -43,16 +57,16 @@ public class HomeScreenController {
    * @throws IOException if an error occurs while loading the FXML file from the choose document screen.
    */
   public void goToChooseDocumentScreen(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/view/chooseDocument.fxml"));
-    window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    scene = new Scene(root);
-    window.setScene(scene);
-    window.show();
+      Parent root = FXMLLoader.load(getClass().getResource("/view/chooseDocument.fxml"));
+      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      scene = new Scene(root);
+      window.setScene(scene);
+      window.show();
   }
 
-  public void showHelpRectangle(ActionEvent event) throws IOException{
-    rectangleHelp.setVisible(!rectangleHelp.isVisible());
-    imageViewHelp.setVisible(!imageViewHelp.isVisible());
+  public void showHelpRectangle(ActionEvent event) throws IOException {
+      rectangleHelp.setVisible(!rectangleHelp.isVisible());
+      imageViewHelp.setVisible(!imageViewHelp.isVisible());
   }
 
 }

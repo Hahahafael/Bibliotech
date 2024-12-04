@@ -17,16 +17,16 @@
             <Hyperlink layoutX="212.0" layoutY="220.0" text="Esqueci minha senha" />
          </children>
       </AnchorPane>
-      <TextField layoutX="513.0" layoutY="263.0" prefHeight="50.0" prefWidth="256.0" promptText="Login" stylesheets="@../styles/styleOfTextBar.css">
+      <TextField fx:id="loginTextField" layoutX="513.0" layoutY="263.0" prefHeight="50.0" prefWidth="256.0" promptText="Login" stylesheets="@../styles/styleOfTextBar.css">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <PasswordField layoutX="514.0" layoutY="346.0" prefHeight="54.0" prefWidth="259.0" promptText="Senha" stylesheets="@../styles/styleOfTextBar.css">
+      <PasswordField fx:id="passwordLogin" layoutX="514.0" layoutY="346.0" prefHeight="54.0" prefWidth="259.0" promptText="Senha" stylesheets="@../styles/styleOfTextBar.css">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></PasswordField>
-      <Button layoutX="510.0" layoutY="443.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="266.0" style="-fx-background-color: #2C3E50;" stylesheets="@../styles/styleOfButtons.css" text="Acessar" textFill="WHITE">
+      <Button fx:id="loginButton" layoutX="510.0" layoutY="443.0" mnemonicParsing="false" onAction="#login" prefHeight="53.0" prefWidth="266.0" style="-fx-background-color: #2C3E50;" stylesheets="@../styles/styleOfButtons.css" text="Acessar" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
