@@ -1,7 +1,7 @@
 CREATE TABLE Usuario (
     id_usuario SERIAL PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    login VARCHAR(20) NOT NULL,
+    login VARCHAR(20) NOT NULL UNIQUE,
     senha VARCHAR(20) NOT NULL,
     email VARCHAR(40) NOT NULL,
     telefone CHAR(15),

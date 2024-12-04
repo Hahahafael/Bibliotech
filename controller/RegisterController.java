@@ -19,6 +19,7 @@ public class RegisterController {
     @FXML TextField EmailRegister;
     @FXML TextField PhoneRegister;
     @FXML TextField PasswordRegister;
+    @FXML TextField LoginRegister;
     @FXML Button RegisterButton;
 
     private Stage window;
@@ -48,8 +49,9 @@ public class RegisterController {
         String email = EmailRegister.getText();
         String telefone = PhoneRegister.getText();
         String senha = PasswordRegister.getText();
+        String login = LoginRegister.getText();
         Usuario novoUsuario = new Usuario(nome, nome, email, telefone, senha);
-        novoUsuario.setLogin(email);
+        novoUsuario.setLogin(login);
         novoUsuario.setNome(nome);
         novoUsuario.setEmail(email); 
         novoUsuario.setTelefone(telefone);
