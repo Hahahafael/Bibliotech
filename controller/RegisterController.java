@@ -25,7 +25,11 @@ public class RegisterController {
     private Stage window;
     private Scene scene;
 
-    // Função para registrar um novo usuário
+   /**
+   * go to login screen
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void goToLoginScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -34,7 +38,11 @@ public class RegisterController {
         window.show();
     }
 
-    // Função para retornar à tela inicial
+   /**
+   * go to homeScreen page
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void returnPreviousPage(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml"));
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -43,7 +51,11 @@ public class RegisterController {
         window.show();
     }
 
-    // Função de registro
+   /**
+   * put informations into database and after do login
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void register(ActionEvent event) throws IOException {
         String nome = NameRegister.getText();
         String email = EmailRegister.getText();
@@ -59,22 +71,14 @@ public class RegisterController {
         novoUsuario.setMultaAcumulada(0); 
         novoUsuario.setStatusDaConta("Ativa"); 
         novoUsuario.setTipo("Aluno");
-
-        // Registrar o novo usuário no banco de dados
         UsuarioDAO usuarioDAO = new UsuarioDAO(novoUsuario);
         boolean resultado = usuarioDAO.insert();
-
         if (resultado) {
             System.out.println("Usuário registrado com sucesso!");
-
-            // Login automático após o registro
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
             Parent root = loader.load();
             HomeScreenController homeScreenController = loader.getController();
-            
-            // Passar o usuário logado para a tela inicial
             homeScreenController.setUsuarioLogado(novoUsuario);
-
             window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             window.setScene(scene);

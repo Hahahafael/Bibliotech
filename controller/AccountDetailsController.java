@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 import model.entities.Usuario;
 
 public class AccountDetailsController {
-  
   @FXML TextField nameAccountDatails;
   @FXML TextField loginAccountDatails;
   @FXML TextField emailAccountDatails;
@@ -23,7 +22,11 @@ public class AccountDetailsController {
   private Stage window;
   private Scene scene;
 
-  // Método para receber e exibir as informações da conta logada
+  /**
+   * set all informations of account logged into TextFields
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
   public void setAccountDetails(Usuario usuario) {
       nameAccountDatails.setText(usuario.getNome());
       loginAccountDatails.setText(usuario.getLogin());

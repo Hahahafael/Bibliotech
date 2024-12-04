@@ -36,6 +36,11 @@ public class MonographRegistrationController {
     window.show();
   }
 
+  /**
+   * the "edite" button can chose a photo file in your PC
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
   public void selectImage(ActionEvent event) throws IOException {
     FileChooser fileChooser = new FileChooser();
     FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Imagens (JPG, PNG, GIF)", "*.jpg", "*.jpeg", "*.png", "*.gif");

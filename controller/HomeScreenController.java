@@ -23,23 +23,33 @@ public class HomeScreenController {
     private Stage window;
     private Scene scene;
     private boolean isLoggedIn = false;
-    
-    // Variável global para armazenar o usuário logado
     private Usuario usuarioLogado;
 
-    // Método para configurar o usuário logado
+   /**
+   * Turn usuario to logged
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void setUsuarioLogado(Usuario usuario) {
         this.usuarioLogado = usuario;
         setLoggedIn(true);
     }
 
-    // Método para atualizar a visibilidade do botão de login
+   /**
+   * Change to logged and call the updateLoginButtonVisibility function
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void setLoggedIn(boolean loggedIn) {
         this.isLoggedIn = loggedIn;
         updateLoginButtonVisibility(); 
     }
 
-    // Atualiza a visibilidade do botão de login
+   /**
+   * update the loginButton and the accountButton visibility
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     private void updateLoginButtonVisibility() {
         if (isLoggedIn) {
             goToLoginScreen.setVisible(false);  
@@ -50,7 +60,11 @@ public class HomeScreenController {
         }
     }
 
-    // Redireciona para a tela de login
+   /**
+   * go to Login Screen
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void goToLoginScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -59,7 +73,11 @@ public class HomeScreenController {
         window.show();
     }
 
-    // Redireciona para a tela de documentos
+   /**
+   * go to ChooseDocument screen
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void goToChooseDocumentScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/chooseDocument.fxml"));
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -68,25 +86,26 @@ public class HomeScreenController {
         window.show();
     }
 
-    // Função para mostrar a ajuda
+   /**
+   * Show the help instructions
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void showHelpRectangle(ActionEvent event) throws IOException {
         rectangleHelp.setVisible(!rectangleHelp.isVisible());
         imageViewHelp.setVisible(!imageViewHelp.isVisible());
     }
 
-    // Redireciona para a tela da conta
+   /**
+   * go to AccountDetails screen
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
     public void goToAccountScreen(ActionEvent event) throws IOException {
-        // Carregar a tela de AccountDetails
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/accountDetails.fxml"));
         Parent root = loader.load();
-        
-        // Obter o controlador de AccountDetails
         AccountDetailsController accountDetailsController = loader.getController();
-        
-        // Passar o usuário logado para a tela de detalhes
-        accountDetailsController.setAccountDetails(usuarioLogado);  // Método que vamos criar na próxima etapa
-    
-        // Mostrar a nova tela
+        accountDetailsController.setAccountDetails(usuarioLogado); 
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         window.setScene(scene);
