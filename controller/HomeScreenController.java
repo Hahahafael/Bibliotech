@@ -22,43 +22,7 @@ public class HomeScreenController {
 
     private Stage window;
     private Scene scene;
-    private boolean isLoggedIn = false;
-    private Usuario usuarioLogado;
 
-   /**
-   * Turn usuario to logged
-   * @param event the triggered event, usually a click on a button.
-   * @throws IOException if an error occurs while loading the FXML file from the home screen.
-   */
-    public void setUsuarioLogado(Usuario usuario) {
-        this.usuarioLogado = usuario;
-        setLoggedIn(true);
-    }
-
-   /**
-   * Change to logged and call the updateLoginButtonVisibility function
-   * @param event the triggered event, usually a click on a button.
-   * @throws IOException if an error occurs while loading the FXML file from the home screen.
-   */
-    public void setLoggedIn(boolean loggedIn) {
-        this.isLoggedIn = loggedIn;
-        updateLoginButtonVisibility(); 
-    }
-
-   /**
-   * update the loginButton and the accountButton visibility
-   * @param event the triggered event, usually a click on a button.
-   * @throws IOException if an error occurs while loading the FXML file from the home screen.
-   */
-    private void updateLoginButtonVisibility() {
-        if (isLoggedIn) {
-            goToLoginScreen.setVisible(false);  
-            accountButton.setVisible(true);
-        } else {
-            goToLoginScreen.setVisible(true); 
-            accountButton.setVisible(false);
-        }
-    }
 
    /**
    * go to Login Screen
@@ -104,8 +68,6 @@ public class HomeScreenController {
     public void goToAccountScreen(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/accountDetails.fxml"));
         Parent root = loader.load();
-        AccountDetailsController accountDetailsController = loader.getController();
-        accountDetailsController.setAccountDetails(usuarioLogado); 
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         window.setScene(scene);

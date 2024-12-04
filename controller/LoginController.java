@@ -66,8 +66,6 @@ public class LoginController {
             System.out.println("Login realizado com sucesso!");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
             Parent root = loader.load();
-            HomeScreenController homeScreenController = loader.getController();
-            homeScreenController.setUsuarioLogado(usuario);
             window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             window.setScene(scene);
