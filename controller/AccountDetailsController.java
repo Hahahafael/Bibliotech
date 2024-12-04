@@ -7,9 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Session; // Importando a classe Session
+import model.Session; 
 import model.entities.Usuario;
 
 public class AccountDetailsController {
@@ -18,6 +19,7 @@ public class AccountDetailsController {
     @FXML TextField emailAccountDatails;
     @FXML TextField passwordAccountDatails;
     @FXML TextField phoneAccountDatails;
+    @FXML Label statusLabel;
 
     private Stage window;
     private Scene scene;
@@ -29,19 +31,17 @@ public class AccountDetailsController {
      * @throws IOException Se ocorrer um erro ao carregar o arquivo FXML da tela.
      */
     public void initialize() {
-        // Obter o usuário logado a partir da classe Session
-        Usuario usuarioLogado = Session.getUsuarioLogado();
-        
-        if (usuarioLogado != null) {
-            // Preencher os campos de texto com as informações da conta logada
-            nameAccountDatails.setText(usuarioLogado.getNome());
-            loginAccountDatails.setText(usuarioLogado.getLogin());
-            emailAccountDatails.setText(usuarioLogado.getEmail());
-            phoneAccountDatails.setText(usuarioLogado.getTelefone());
-            passwordAccountDatails.setText(usuarioLogado.getSenha());
-        } else {
-            System.out.println("Nenhum usuário logado!");
-        }
+      Usuario usuarioLogado = Session.getUsuarioLogado();
+      if (usuarioLogado != null) {
+          nameAccountDatails.setText(usuarioLogado.getNome());
+          loginAccountDatails.setText(usuarioLogado.getLogin());
+          emailAccountDatails.setText(usuarioLogado.getEmail());
+          phoneAccountDatails.setText(usuarioLogado.getTelefone());
+          passwordAccountDatails.setText(usuarioLogado.getSenha());
+          statusLabel.setText(usuarioLogado.getStatusDaConta());
+      } else {
+          System.out.println("Nenhum usuário logado!");
+      }
     }
 
     /**
