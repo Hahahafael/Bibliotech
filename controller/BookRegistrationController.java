@@ -10,14 +10,29 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import model.dao.classes.LivroDAO;
+import model.entities.Categoria;
+import model.entities.Livro;
 
 public class BookRegistrationController {
   @FXML ImageView ImageViewBookRegistration;
   @FXML Button addPhotoButtonBookResgistration;
+  @FXML TextField codeBookRegistration;
+  @FXML TextField titleBookRegistration;
+  @FXML TextField publisherBookRegistration;
+  @FXML TextField editionBookRegistration;
+  @FXML TextField pagesBookRegistration;
+  @FXML TextField languageBookRegistration;
+  @FXML TextField categoryBookRegistration;
+  @FXML TextField categoryNumberBookRegistration;
+  @FXML Button buttonBookRegistration;
+  @FXML DatePicker dateBookRegistration;
 
   private Stage window;
   private Scene scene;
@@ -49,6 +64,39 @@ public class BookRegistrationController {
     if (selectedFile != null) {
       Image image = new Image(selectedFile.toURI().toString());
       ImageViewBookRegistration.setImage(image);
+    }
+  }
+
+  /**
+  * Registers a book in the system.
+  * 
+  * @param event the triggered event, usually a click on a button.
+  * @throws IOException if an error occurs while loading the FXML file from the home screen.
+  */
+  public void registerBook(ActionEvent event) throws IOException {
+    String code = codeBookRegistration.getText();
+    String title = titleBookRegistration.getText();
+    String publisher = publisherBookRegistration.getText();
+    int edition = Integer.parseInt(editionBookRegistration.getText());
+    int pages = Integer.parseInt(pagesBookRegistration.getText());
+    String language = languageBookRegistration.getText();
+    String category = categoryBookRegistration.getText();
+    int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
+    java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue()); // Convertendo para Date
+    Categoria categoria = new Categoria(categoryNumber, category);
+    Livro livro = new Livro(code, title, date, null, pages, language, categoria, publisher, edition);
+    LivroDAO livroDAO = new LivroDAO(livro);
+    boolean resultado = livroDAO.insert();
+    if (resultado) {
+      System.out.println("Livro registrado com sucesso!");
+      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
+      Parent root = loader.load();
+      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      scene = new Scene(root);
+      window.setScene(scene);
+      window.show();
+    } else {
+      System.out.println("Erro ao registrar livro.");
     }
   }
 }
