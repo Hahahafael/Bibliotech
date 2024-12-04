@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountDetailsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountDetailsController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
       <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" stylesheets="@../styles/styleOfButtons.css" text="Voltar" textFill="WHITE">
@@ -45,6 +45,9 @@
             <Label fx:id="statusLabel" layoutX="572.0" layoutY="104.0" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <Button layoutX="1119.0" layoutY="35.0" mnemonicParsing="false" onAction="#goToLoanScreen" prefHeight="51.0" prefWidth="109.0" text="Emprestimos" />
+      <Button layoutX="1062.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToLoanScreen" prefHeight="73.0" prefWidth="166.0" style="-fx-background-color: #95A5A6;" text="Emprestimos" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
    </children>
 </AnchorPane>

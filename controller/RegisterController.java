@@ -21,6 +21,7 @@ public class RegisterController {
     @FXML TextField PasswordRegister;
     @FXML TextField LoginRegister;
     @FXML Button RegisterButton;
+    
 
     private Stage window;
     private Scene scene;
