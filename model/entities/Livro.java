@@ -14,6 +14,12 @@ public class Livro extends Documento{
         this.edicao = edicao;
     }
 
+    public Livro(String codigo, String editora, int edicao) {
+        super(codigo);
+        this.editora = editora;
+        this.edicao = edicao;
+    }
+
     public Livro(String codigo) {
         super(codigo);
     }
