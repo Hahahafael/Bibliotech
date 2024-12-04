@@ -7,8 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.Session; 
 import model.Session; 
 import model.entities.Usuario;
 
@@ -18,6 +20,7 @@ public class AccountDetailsController {
     @FXML TextField emailAccountDatails;
     @FXML TextField passwordAccountDatails;
     @FXML TextField phoneAccountDatails;
+    @FXML Label statusLabel;
 
     private Stage window;
     private Scene scene;
