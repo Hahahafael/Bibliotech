@@ -9,7 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Session; // Importando a classe Session
+import model.Session; 
 import model.entities.Usuario;
 
 public class AccountDetailsController {
@@ -23,17 +23,17 @@ public class AccountDetailsController {
     private Scene scene;
 
     /**
-     * Método chamado para configurar os detalhes da conta do usuário logado.
-     * Preenche os campos de texto com os dados do usuário.
-     * @param event O evento disparado (geralmente um clique em um botão).
-     * @throws IOException Se ocorrer um erro ao carregar o arquivo FXML da tela.
+     * Method called to configure logged in user account details.
+     * Fills in the text fields with user data.
+     * @param event The event fired (usually a button click).
+     * @throws IOException If an error occurs while loading the FXML file from the screen.
      */
     public void initialize() {
-        // Obter o usuário logado a partir da classe Session
+        // Get the logged in user from the Session class
         Usuario usuarioLogado = Session.getUsuarioLogado();
         
         if (usuarioLogado != null) {
-            // Preencher os campos de texto com as informações da conta logada
+            // Fill in the text fields with the logged in account information
             nameAccountDatails.setText(usuarioLogado.getNome());
             loginAccountDatails.setText(usuarioLogado.getLogin());
             emailAccountDatails.setText(usuarioLogado.getEmail());
@@ -45,9 +45,9 @@ public class AccountDetailsController {
     }
 
     /**
-     * Retorna para a tela anterior (HomeScreen).
-     * @param event O evento disparado (geralmente um clique em um botão).
-     * @throws IOException Se ocorrer um erro ao carregar o arquivo FXML da tela.
+     * Returns to the previous screen (HomeScreen).
+     * @param event The event fired (usually a button click).
+     * @throws IOException If an error occurs while loading the FXML file from the screen.
      */
     public void returnPreviousPage(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml"));
@@ -58,9 +58,9 @@ public class AccountDetailsController {
     }
 
     /**
-     * Vai para a tela de empréstimo.
-     * @param event O evento disparado (geralmente um clique em um botão).
-     * @throws IOException Se ocorrer um erro ao carregar o arquivo FXML da tela.
+     * Goes to the loan screen.
+     * @param event The event fired (usually a button click).
+     * @throws IOException If an error occurs while loading the FXML file from the screen.
      */
     public void goToLoanScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/loanScreen.fxml"));
