@@ -76,7 +76,17 @@ public class HomeScreenController {
 
     // Redireciona para a tela da conta
     public void goToAccountScreen(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/accountDetails.fxml"));
+        // Carregar a tela de AccountDetails
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/accountDetails.fxml"));
+        Parent root = loader.load();
+        
+        // Obter o controlador de AccountDetails
+        AccountDetailsController accountDetailsController = loader.getController();
+        
+        // Passar o usuário logado para a tela de detalhes
+        accountDetailsController.setAccountDetails(usuarioLogado);  // Método que vamos criar na próxima etapa
+    
+        // Mostrar a nova tela
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         window.setScene(scene);

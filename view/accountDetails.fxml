@@ -28,11 +28,11 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="223.0" layoutX="39.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="649.0" />
             <Button layoutX="598.0" layoutY="267.0" minHeight="11.0" minWidth="66.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="66.0" stylesheets="@../styles/styleOfButtons.css" text="Editar" />
             <Button layoutX="125.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" stylesheets="@../styles/styleOfEditButtons.css" text="editar" />
-            <TextField layoutX="135.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField editable="false" layoutX="135.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField layoutX="395.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField layoutX="135.0" layoutY="385.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField layoutX="395.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField fx:id="nameAccountDatails" editable="false" layoutX="135.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField fx:id="loginAccountDatails" editable="false" layoutX="135.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField fx:id="passwordAccountDatails" editable="false" layoutX="395.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField fx:id="emailAccountDatails" editable="false" layoutX="135.0" layoutY="385.0" stylesheets="@../styles/styleOfTextBar.css" />
+            <TextField fx:id="phoneAccountDatails" editable="false" layoutX="395.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
             <Label layoutX="80.0" layoutY="285.0" text="Nome" textFill="WHITE" />
             <Label layoutX="80.0" layoutY="340.0" text="Login" textFill="WHITE" />
             <Label layoutX="340.0" layoutY="282.0" text="Senha" textFill="WHITE" />
