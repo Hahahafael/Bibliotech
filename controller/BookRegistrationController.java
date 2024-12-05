@@ -11,7 +11,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.dao.classes.DocumentoDAO;
-import model.dao.classes.LivroDAO;
 import model.entities.Categoria;
 import model.entities.Documento;
 import model.entities.Livro;
@@ -69,7 +68,7 @@ public class BookRegistrationController {
     DocumentoDAO documentoLivroDAO = new DocumentoDAO(documentoLivro);
     boolean resultadoDocumento = documentoLivroDAO.insert();
     Livro livro = new Livro(code, publisher, edition);
-    LivroDAO livroDAO = new LivroDAO(livro);
+    DocumentoDAO livroDAO = new DocumentoDAO(livro);
     boolean resultado = livroDAO.insert();
     if (resultado) {
       boolean resultadoLivro = livroDAO.insert();
