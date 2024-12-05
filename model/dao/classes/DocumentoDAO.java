@@ -77,51 +77,28 @@ public class DocumentoDAO implements IDocumentoDAO {
 
   @Override
   public boolean insert() throws IOException {
-
-    java.sql.Date sqlDate = new java.sql.Date(documento.getData().getTime());
-
-    try {
-      PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
-      ps.setString(1, documento.getCodigo());
-      ps.setString(2, documento.getTitulo());
-      ps.setDate(3, sqlDate);
-      ps.setInt(4, documento.getNumPaginas());
-      ps.setString(5, documento.getIdioma());
-      ps.setInt(11, documento.getCategoria().getNumero());
-
+     try {
+        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
+        ps.setString(1, documento.getCodigo());
+        ps.setString(2, documento.getTitulo());
+        ps.setDate(3, new java.sql.Date(documento.getData().getTime()));
+        ps.setInt(4, documento.getNumPaginas());
+        ps.setString(5, documento.getIdioma());
+        ps.setInt(11, documento.getCategoria().getNumero());
       if (documento instanceof Livro) {
         Livro livro = (Livro) documento;
         ps.setString(6, livro.getEditora());
-        ps.setInt(7, livro.getEdicao()); 
+        ps.setInt(7, livro.getEdicao());
         ps.setNull(8, java.sql.Types.VARCHAR);
         ps.setNull(9, java.sql.Types.VARCHAR);
-        ps.setString(10, "Livro");   
-
-      } else if (documento instanceof Monografia) {
-        Monografia monografia = (Monografia) documento;
-        ps.setNull(6, java.sql.Types.VARCHAR);
-        ps.setNull(7, java.sql.Types.INTEGER);
-        ps.setString(8, monografia.getOrientador());
-        ps.setString(9, monografia.getInstituicao());
-        ps.setString(10, "Monografia"); 
-
-      } else if (documento instanceof Ebook) {
-        Ebook ebook = (Ebook) documento;
-        ps.setString(6, ebook.getEditora()); 
-        ps.setInt(7, ebook.getEdicao()); 
-        ps.setNull(8, java.sql.Types.VARCHAR);
-        ps.setNull(9, java.sql.Types.VARCHAR);
-        ps.setString(10, "Ebook"); 
-    }
-
+        ps.setString(10, "Livro");
+      }
       ps.executeUpdate();
-
       return true;
-
     } catch (SQLException e) {
-      System.out.println("Erro ao cadastrar. Exception: " + e.getMessage());
+      System.out.println("Erro ao cadastrar documento. Exception: " + e.getMessage());
+      return false;
     }
-    return false;
   }
 
   @Override
