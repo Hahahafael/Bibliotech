@@ -79,7 +79,6 @@ public class MonographRegistrationController {
    * @throws IOException if an error occurs during file operations or while attempting to load resources 
    *                     (e.g., FXML files, external configurations) needed for the registration process.
    */
-   
   public void registerMonograph(ActionEvent event) throws IOException {
     String codigo = codeMonograph.getText();
     String titulo = titleMonograph.getText();
