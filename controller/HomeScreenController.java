@@ -14,6 +14,7 @@ import model.Session;
 
 public class HomeScreenController {
     @FXML Button goToLoginScreen;
+    @FXML Button goToChooseDocumentScreen;
     @FXML ImageView imageViewHelp;
     @FXML Rectangle rectangleHelp;
     @FXML Button accountButton;
@@ -25,7 +26,10 @@ public class HomeScreenController {
         if (Session.isUsuarioLogado()) {
             goToLoginScreen.setVisible(false);
             accountButton.setVisible(true);
-        }
+            if (Session.getUsuarioLogado().getTipo().equals("Administrador")) {
+                goToChooseDocumentScreen.setVisible(true);
+            }
+        } 
     }
 
    /**

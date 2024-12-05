@@ -78,3 +78,6 @@ CREATE TABLE Emprestado (
     FOREIGN KEY (cod_emprestimo) REFERENCES Emprestimo(cod_emprestimo),
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
 );
+
+INSERT INTO Usuario
+VALUES (1,'admin','admin','admin','admin@email.com', null, null,'Ativo','Administrador');
