@@ -47,7 +47,7 @@
             <VBox prefHeight="398.0" prefWidth="550.0" />
          </content>
       </ScrollPane>
-      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" visible="false" width="301.0" />
+      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#002349" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" visible="false" width="301.0" />
       <ImageView fx:id="imageViewHelp" fitHeight="505.0" fitWidth="290.0" layoutX="968.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false" />
       <Button layoutX="1092.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToChooseDocumentScreen" prefHeight="73.0" prefWidth="150.0" styleClass="goldButton" text="Cadastrar Documento" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
@@ -57,7 +57,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="accountButton" layoutX="899.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToAccountScreen" prefHeight="96.0" prefWidth="165.0" style="-fx-background-color: #95A5A6;" stylesheets="@/styles/styleUpperBarButton.css" text="Conta" textFill="WHITE" visible="false">
+      <Button fx:id="accountButton" layoutX="939.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToAccountScreen" prefHeight="73.0" prefWidth="125.0" styleClass="goldButton" text="Conta" textFill="WHITE" visible="false">
          <font>
             <Font size="19.0" />
          </font>
