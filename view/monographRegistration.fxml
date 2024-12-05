@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import java.lang.String?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MonographRegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MonographRegistrationController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" layoutY="-28.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
-      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" style="-fx-background-color: #2C3E50;" stylesheets="@../styles/styleOfButtons.css" text="Voltar" textFill="WHITE">
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" styleClass="blueButton" text="Voltar" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -24,7 +24,7 @@
       </Button>
       <AnchorPane layoutX="192.0" layoutY="174.0" prefHeight="492.0" prefWidth="991.0" style="-fx-background-color: #ECF0F1;">
          <children>
-            <TextField fx:id="codeMonograph" layoutX="350.0" layoutY="85.0" prefHeight="34.0" prefWidth="169.0" promptText="nº codigo" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="codeMonograph" layoutX="350.0" layoutY="85.0" prefHeight="34.0" prefWidth="169.0" promptText="nº codigo" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -34,7 +34,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="titleMonograph" layoutX="350.0" layoutY="165.0" prefHeight="40.0" prefWidth="611.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="titleMonograph" layoutX="350.0" layoutY="165.0" prefHeight="40.0" prefWidth="611.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -59,7 +59,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="institutionMonograph" layoutX="350.0" layoutY="245.0" prefHeight="34.0" prefWidth="611.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="institutionMonograph" layoutX="350.0" layoutY="245.0" prefHeight="34.0" prefWidth="611.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -69,7 +69,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="registerButtonMonograph" layoutX="849.0" layoutY="405.0" mnemonicParsing="false" onAction="#registerMonograph" prefHeight="41.0" prefWidth="97.0" style="-fx-background-color: #2c3e50;" stylesheets="@../styles/styleOfButtons.css" text="Cadastrar" textFill="WHITE">
+            <Button fx:id="registerButtonMonograph" layoutX="849.0" layoutY="405.0" mnemonicParsing="false" onAction="#registerMonograph" prefHeight="41.0" prefWidth="110.0" styleClass="goldButton" text="Cadastrar" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="13.0" />
                </font>
@@ -77,7 +77,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="pageMonograph" layoutX="60.0" layoutY="325.0" prefHeight="34.0" prefWidth="263.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="pageMonograph" layoutX="60.0" layoutY="325.0" prefHeight="34.0" prefWidth="263.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -92,12 +92,12 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="languageMonograph" layoutX="350.0" layoutY="325.0" prefHeight="34.0" prefWidth="608.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="languageMonograph" layoutX="350.0" layoutY="325.0" prefHeight="40.0" prefWidth="611.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="categoryMonograph" layoutX="60.0" layoutY="405.0" prefHeight="34.0" prefWidth="398.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="categoryMonograph" layoutX="60.0" layoutY="405.0" prefHeight="34.0" prefWidth="398.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -107,28 +107,28 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="categoryNumberMonograph" layoutX="475.0" layoutY="405.0" prefHeight="34.0" prefWidth="346.0">
+            <TextField fx:id="categoryNumberMonograph" layoutX="475.0" layoutY="405.0" prefHeight="34.0" prefWidth="346.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
-               <stylesheets>
-                  <URL value="@../styles/styleUpperBarButton.css" />
-                  <URL value="@../styles/styleOfTextBar.css" />
-               </stylesheets>
             </TextField>
             <Label layoutX="477.0" layoutY="370.0" text="Nº Categoria">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="advisorMonograph" layoutX="60.0" layoutY="245.0" prefHeight="34.0" prefWidth="271.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="advisorMonograph" layoutX="60.0" layoutY="245.0" prefHeight="34.0" prefWidth="271.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="135.0" layoutX="113.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="135.0" layoutX="113.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
             <ImageView fx:id="ImageViewMonographRegistration" fitHeight="118.0" fitWidth="91.0" layoutX="123.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="addPhotoButtonMonographResgistration" layoutX="164.0" layoutY="66.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="20.0" prefWidth="55.0" stylesheets="@../styles/styleOfEditButtons.css" text="editar" />
+            <Button fx:id="addPhotoButtonMonographResgistration" layoutX="164.0" layoutY="66.0" mnemonicParsing="false" onAction="#selectImage" prefHeight="20.0" prefWidth="55.0" text="editar">
+               <styleClass>
+                  <String fx:value="editButton" />
+                  <String fx:value="goldButton" />
+               </styleClass></Button>
             <Label layoutX="60.0" layoutY="210.0" text="Orientador">
                <font>
                   <Font size="18.0" />
@@ -136,10 +136,16 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="469.0" layoutY="106.0" text="CADASTRO DE MONOGRAFIA">
+      <Label layoutX="469.0" layoutY="106.0" style="-fx-font-weight: bold;" text="CADASTRO DE MONOGRAFIA">
          <font>
             <Font size="33.0" />
          </font>
       </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="96.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <ImageView fitHeight="88.0" fitWidth="200.0" layoutX="72.0" layoutY="4.0">
+         <image>
+            <Image url="@../img/menu-logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

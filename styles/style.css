@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Stencil';
+  src: url('Stencil-Std-Bold.ttf');
+}
+
+.label {
+  -fx-font-family: 'Gotham';
+}
+
+.button {
+  -fx-text-fill: white;
+  -fx-font-family: 'Gotham';
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+  -fx-cursor: hand;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 3);
+}
+
+.button:hover {
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0, 0, 3);
+}
+
+.button:pressed {
+  -fx-effect: none; 
+}
+
+.goldButton {
+  -fx-background-color: #9E7F2F;
+}
+
+.goldButton:hover {
+  -fx-background-color: #ae8e3b; 
+}
+
+.goldButton:pressed {
+  -fx-background-color: #8e7127; 
+  -fx-effect: none;
+}
+
+.blueButton {
+  -fx-background-color: #002349;
+}
+
+.blueButton:hover {
+  -fx-background-color: #022d5a;
+
+}
+
+.blueButton:pressed {
+  -fx-background-color: #001b37;
+  -fx-effect: none;
+}
+
+.menuBarButton {
+  -fx-padding: 10px 20px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+}
+
+.searchButton {
+  -fx-padding: 10px 20px;
+  -fx-background-radius: 0px 20px 20px 0px; 
+  -fx-border-radius: 0px 20px 20px 0px;
+  -fx-min-width: 100px;
+  -fx-min-height: 40px;
+}
+
+.helpButton {
+  -fx-padding: 5px 15px; 
+  -fx-font-size: 12px;
+  -fx-background-radius: 20px; 
+  -fx-border-radius: 20px;
+  -fx-min-width: 80px; 
+  -fx-min-height: 30px; 
+}
+
+.textField {
+  -fx-background-color: #FAFCFD; 
+  -fx-text-fill: #333; 
+  -fx-padding: 10px; 
+  -fx-border-color: #ccc; 
+  -fx-border-width: 0px; 
+  -fx-font-family: 'Gotham'; 
+  -fx-font-size: 14px; 
+  -fx-font-weight: 600;
+  -fx-prompt-text-fill: #aaa; 
+  -fx-background-radius: 15px; 
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 5); 
+  -fx-cursor: text;
+}
+
+.textField:hover {
+  -fx-background-color: #f5f5f5; 
+  -fx-border-color: #3498db; 
+  -fx-text-fill: #000; 
+  -fx-cursor: text; 
+}
+
+.textField:focused {
+  -fx-background-color: #fff; 
+  -fx-text-fill: #000; 
+  -fx-border-color: transparent; 
+  -fx-border-width: 2px; 
+  -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.5), 5, 0, 0, 5); 
+}
+
+.textField:focused:-fx-prompt-text-fill {
+  -fx-prompt-text-fill: #3498db; 
+}
+
+.editButton {
+  -fx-padding: 5px 15px; 
+  -fx-font-size: 9px; 
+  -fx-font-family: 'Gotham';
+  -fx-font-weight: bold;
+  -fx-background-radius: 20px; 
+  -fx-border-radius: 20px;
+  -fx-min-width: 14px; 
+  -fx-min-height: 10px; 
+}
