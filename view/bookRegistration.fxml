@@ -129,10 +129,13 @@
             <Font size="33.0" />
          </font>
       </Label>
-      <ImageView fitHeight="88.0" fitWidth="200.0" layoutX="72.0" layoutY="4.0">
+      <ImageView fx:id="logoImage" fitHeight="88.0" fitWidth="200.0" layoutX="72.0" layoutY="4.0" onMouseClicked="#goToHomeScreen">
          <image>
             <Image url="@../img/menu-logo.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
    </children>
 </AnchorPane>

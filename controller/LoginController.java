@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Session;
 import model.dao.classes.UsuarioDAO;
@@ -18,6 +20,7 @@ public class LoginController {
     @FXML TextField loginTextField;
     @FXML TextField passwordLogin;
     @FXML Button loginButton;
+    @FXML ImageView logoImage;
 
     private Stage window;
     private Scene scene;
@@ -47,6 +50,15 @@ public class LoginController {
         window.setScene(scene);
         window.show();
     }
+
+    // Método chamado ao clicar na logo
+        public void goToHomeScreen(MouseEvent event) throws IOException {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml")); // Ajuste o caminho para o seu arquivo FXML da tela inicial
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
 
     /**
     * Do almost all of login feature

@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.dao.classes.DocumentoDAO;
 import model.entities.Categoria;
@@ -19,6 +20,7 @@ import model.entities.Ebook;
 
 public class EbookRegistrationController {
   @FXML ImageView ImageViewEBookRegistration;
+  @FXML ImageView logoImage;
   @FXML TextField codeEbookRegistration;
   @FXML TextField titleEbookRegistration;
   @FXML TextField publisherEbookRegistration;
@@ -103,5 +105,14 @@ public class EbookRegistrationController {
     } catch (Exception e) {
       System.out.println("Erro ao registrar o e-book. Exception: " + e.getMessage());
     }
+  }
+
+  // Método chamado ao clicar na logo
+  public void goToHomeScreen(MouseEvent event) throws IOException {
+    Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml")); // Ajuste o caminho para o seu arquivo FXML da tela inicial
+    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    Scene scene = new Scene(root);
+    stage.setScene(scene);
+    stage.show();
   }
  }
