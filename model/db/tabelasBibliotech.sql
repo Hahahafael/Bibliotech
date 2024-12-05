@@ -24,7 +24,7 @@ CREATE TABLE Categoria (
 );
 
 CREATE TABLE Documento (
-    cod_documento SERIAL PRIMARY KEY,
+    cod_documento VARCHAR(30) PRIMARY KEY,
     titulo VARCHAR(50) NOT NULL,
     data_publicacao DATE,
     num_paginas INT,
@@ -40,7 +40,7 @@ CREATE TABLE Documento (
 
 CREATE TABLE Recebe (
     id_comentario INT,
-    cod_documento INT,
+    cod_documento VARCHAR(30),
     PRIMARY KEY (id_comentario, cod_documento),
     FOREIGN KEY (id_comentario) REFERENCES Comentario(id_comentario),
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
@@ -52,7 +52,7 @@ CREATE TABLE Autor (
 );
 
 CREATE TABLE Escreve (
-    cod_documento INT,
+    cod_documento VARCHAR(30),
     id_autor INT,
     PRIMARY KEY (cod_documento, id_autor),
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento),
@@ -73,7 +73,7 @@ CREATE TABLE Emprestimo (
 
 CREATE TABLE Emprestado (
     cod_emprestimo INT,
-    cod_documento INT,
+    cod_documento VARCHAR(30),
     PRIMARY KEY (cod_emprestimo, cod_documento),
     FOREIGN KEY (cod_emprestimo) REFERENCES Emprestimo(cod_emprestimo),
     FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
