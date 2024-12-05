@@ -28,7 +28,7 @@
             <ImageView fitHeight="142.0" fitWidth="145.0" layoutX="40.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="223.0" layoutX="39.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="649.0" />
             <Button layoutX="608.0" layoutY="434.0" minHeight="11.0" minWidth="66.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" styleClass="goldButton" text="Editar" />
-            <Button layoutX="125.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="goldButton" stylesheets="@../styles/styleOfEditButtons.css" text="editar" />
+            <Button layoutX="125.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="goldButton" text="editar" />
             <TextField fx:id="nameAccountDatails" layoutX="135.0" layoutY="275.0" prefHeight="40.0" prefWidth="187.0" styleClass="textField" />
             <TextField fx:id="loginAccountDatails" layoutX="135.0" layoutY="330.0" prefHeight="40.0" prefWidth="187.0" styleClass="textField" />
             <TextField fx:id="passwordAccountDatails" layoutX="395.0" layoutY="275.0" prefHeight="31.0" prefWidth="187.0" styleClass="textField" />
