@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MonographRegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MonographRegistrationController">
    <children>
       <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" styleClass="blueButton" text="Voltar" textFill="WHITE">
          <font>
@@ -23,42 +23,42 @@
       </Button>
       <AnchorPane layoutX="192.0" layoutY="174.0" prefHeight="492.0" prefWidth="991.0" style="-fx-background-color: #ECF0F1;">
          <children>
-            <TextField fx:id="codeMonograph" layoutX="350.0" layoutY="85.0" prefHeight="34.0" prefWidth="169.0" promptText="nº codigo" styleClass="textField">
+            <TextField fx:id="codeMonograph" layoutX="50.0" layoutY="85.0" prefHeight="41.0" prefWidth="215.0" promptText="nº codigo" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="350.0" layoutY="50.0" text="Código*">
+            <Label layoutX="50.0" layoutY="50.0" text="Código*">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="titleMonograph" layoutX="350.0" layoutY="165.0" prefHeight="40.0" prefWidth="611.0" styleClass="textField">
+            <TextField fx:id="titleMonograph" layoutX="50.0" layoutY="165.0" prefHeight="41.0" prefWidth="906.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="350.0" layoutY="130.0" text="Titulo">
+            <Label layoutX="50.0" layoutY="130.0" text="Titulo">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <DatePicker fx:id="yearOfPublicationMonograph" layoutX="580.0" layoutY="85.0" prefHeight="31.0" prefWidth="191.0" promptText="aaaa/mm/dd" stylesheets="@../styles/styleOfDataPicker.css">
+            <DatePicker fx:id="yearOfPublicationMonograph" layoutX="340.0" layoutY="85.0" prefHeight="31.0" prefWidth="191.0" promptText="aaaa/mm/dd" stylesheets="@../styles/styleOfDataPicker.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </DatePicker>
-            <Label layoutX="588.0" layoutY="50.0" text="Ano de Publicação">
+            <Label layoutX="340.0" layoutY="50.0" text="Ano de Publicação">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="institutionMonograph" layoutX="350.0" layoutY="245.0" prefHeight="34.0" prefWidth="611.0" styleClass="textField">
+            <TextField fx:id="institutionMonograph" layoutX="755.0" layoutY="245.0" prefHeight="41.0" prefWidth="206.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="350.0" layoutY="210.0" text="Instituição">
+            <Label layoutX="755.0" layoutY="210.0" text="Instituição">
                <font>
                   <Font size="18.0" />
                </font>
@@ -71,12 +71,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="pageMonograph" layoutX="60.0" layoutY="325.0" prefHeight="34.0" prefWidth="263.0" styleClass="textField">
+            <TextField fx:id="pageMonograph" layoutX="50.0" layoutY="325.0" prefHeight="34.0" prefWidth="263.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="60.0" layoutY="290.0" text="Número de páginas">
+            <Label layoutX="50.0" layoutY="290.0" text="Número de páginas">
                <font>
                   <Font size="18.0" />
                </font>
@@ -91,32 +91,32 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="categoryMonograph" layoutX="60.0" layoutY="405.0" prefHeight="34.0" prefWidth="398.0" styleClass="textField">
+            <TextField fx:id="categoryMonograph" layoutX="50.0" layoutY="405.0" prefHeight="34.0" prefWidth="398.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="60.0" layoutY="370.0" text="Categoria">
+            <Label layoutX="50.0" layoutY="370.0" text="Categoria">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="categoryNumberMonograph" layoutX="475.0" layoutY="405.0" prefHeight="34.0" prefWidth="346.0" styleClass="textField">
+            <TextField fx:id="categoryNumberMonograph" layoutX="470.0" layoutY="405.0" prefHeight="34.0" prefWidth="346.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="477.0" layoutY="370.0" text="Nº Categoria">
+            <Label layoutX="470.0" layoutY="370.0" text="Nº Categoria">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="advisorMonograph" layoutX="60.0" layoutY="245.0" prefHeight="34.0" prefWidth="271.0" styleClass="textField">
+            <TextField fx:id="advisorMonograph" layoutX="50.0" layoutY="245.0" prefHeight="41.0" prefWidth="686.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="60.0" layoutY="210.0" text="Orientador">
+            <Label layoutX="50.0" layoutY="210.0" text="Orientador">
                <font>
                   <Font size="18.0" />
                </font>
