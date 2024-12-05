@@ -12,7 +12,15 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< Updated upstream
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+=======
+<<<<<<< HEAD
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+=======
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+>>>>>>> cf8ed7de329a463a586f09a1fdb4f8b04b94a200
+>>>>>>> Stashed changes
    <children>
       <AnchorPane layoutX="441.0" layoutY="187.0" prefHeight="492.0" prefWidth="406.0" style="-fx-background-color: #ECF0F1;">
          <children>
@@ -44,7 +52,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="519.0" layoutY="139.0" styleClass="selected" stylesheets="@../styles/styleOfLoginRegisterButton.css" text="Entrar" textOverrun="CLIP">
+      <Label layoutX="519.0" layoutY="139.0" stylesheets="@../styles/styleOfLoginRegisterButton.css" text="Entrar" textOverrun="CLIP">
          <font>
             <Font name="Arial Black" size="24.0" />
          </font>

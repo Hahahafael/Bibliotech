@@ -2,7 +2,8 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,6 +21,74 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+<<<<<<< HEAD
+      <ScrollPane layoutX="235.0" layoutY="184.0" prefHeight="536.0" prefWidth="820.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="800.0">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Rectangle arcWidth="5.0" fill="#ecf0f1" height="200.0" stroke="#ecf0f1" strokeType="INSIDE" width="800.0" />
+                        <Rectangle arcWidth="5.0" fill="#9e7f2f" height="200.0" stroke="#9e7f2f" strokeMiterLimit="0.0" strokeType="INSIDE" width="19.0" />
+                        <Label layoutX="30.0" layoutY="20.0" prefHeight="33.0" prefWidth="55.0" style="-fx-font-size: 16;" text="Título: " textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="50.0" prefHeight="33.0" prefWidth="52.0" style="-fx-font-size: 16;" text="Autor: " textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="80.0" prefHeight="33.0" prefWidth="152.0" style="-fx-font-size: 16;" text="Data de empréstimo:" textAlignment="RIGHT" />
+                        <Label layoutX="358.0" layoutY="80.0" prefHeight="33.0" prefWidth="146.0" style="-fx-font-size: 16;" text="Data de Devolução:" textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="110.0" prefHeight="33.0" prefWidth="101.0" style="-fx-font-size: 16;" text="Renovações:" textAlignment="RIGHT" />
+                        <Button layoutX="31.0" layoutY="154.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="162.0" styleClass="blueButton" text="Renovar" />
+                        <Rectangle arcWidth="5.0" fill="#33a13b" height="38.0" layoutX="620.0" layoutY="150.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="166.0" />
+                        <Label alignment="CENTER" layoutX="644.0" layoutY="153.0" prefHeight="33.0" prefWidth="118.0" style="-fx-font-weight: bold;" text="STATUS" textAlignment="CENTER" textFill="WHITE" />
+                        <Label layoutX="79.0" layoutY="20.0" prefHeight="33.0" prefWidth="709.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="85.0" layoutY="50.0" prefHeight="33.0" prefWidth="709.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="182.0" layoutY="80.0" prefHeight="33.0" prefWidth="165.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="498.0" layoutY="80.0" prefHeight="33.0" prefWidth="165.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="123.0" layoutY="110.0" prefHeight="33.0" prefWidth="153.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="250.0">
+                     <children>
+                        <Rectangle arcWidth="5.0" fill="#ecf0f1" height="200.0" stroke="#ecf0f1" strokeType="INSIDE" width="800.0" />
+                        <Rectangle arcWidth="5.0" fill="#9e7f2f" height="200.0" stroke="#9e7f2f" strokeMiterLimit="0.0" strokeType="INSIDE" width="19.0" />
+                        <Label layoutX="30.0" layoutY="20.0" prefHeight="33.0" prefWidth="55.0" style="-fx-font-size: 16;" text="Título: " textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="50.0" prefHeight="33.0" prefWidth="52.0" style="-fx-font-size: 16;" text="Autor: " textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="80.0" prefHeight="33.0" prefWidth="152.0" style="-fx-font-size: 16;" text="Data de empréstimo:" textAlignment="RIGHT" />
+                        <Label layoutX="358.0" layoutY="80.0" prefHeight="33.0" prefWidth="146.0" style="-fx-font-size: 16;" text="Data de Devolução:" textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="110.0" prefHeight="33.0" prefWidth="101.0" style="-fx-font-size: 16;" text="Renovações:" textAlignment="RIGHT" />
+                        <Button layoutX="31.0" layoutY="154.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="162.0" styleClass="blueButton" text="Renovar" />
+                        <Rectangle arcWidth="5.0" fill="#33a13b" height="38.0" layoutX="620.0" layoutY="150.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="166.0" />
+                        <Label alignment="CENTER" layoutX="644.0" layoutY="153.0" prefHeight="33.0" prefWidth="118.0" style="-fx-font-weight: bold;" text="STATUS" textAlignment="CENTER" textFill="WHITE" />
+                        <Label layoutX="79.0" layoutY="20.0" prefHeight="33.0" prefWidth="709.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="85.0" layoutY="50.0" prefHeight="33.0" prefWidth="709.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="182.0" layoutY="80.0" prefHeight="33.0" prefWidth="165.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="498.0" layoutY="80.0" prefHeight="33.0" prefWidth="165.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="123.0" layoutY="110.0" prefHeight="33.0" prefWidth="153.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="500.0">
+                     <children>
+                        <Rectangle arcWidth="5.0" fill="#ecf0f1" height="200.0" stroke="#ecf0f1" strokeType="INSIDE" width="800.0" />
+                        <Rectangle arcWidth="5.0" fill="#9e7f2f" height="200.0" stroke="#9e7f2f" strokeMiterLimit="0.0" strokeType="INSIDE" width="19.0" />
+                        <Label layoutX="30.0" layoutY="20.0" prefHeight="33.0" prefWidth="55.0" style="-fx-font-size: 16;" text="Título: " textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="50.0" prefHeight="33.0" prefWidth="52.0" style="-fx-font-size: 16;" text="Autor: " textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="80.0" prefHeight="33.0" prefWidth="152.0" style="-fx-font-size: 16;" text="Data de empréstimo:" textAlignment="RIGHT" />
+                        <Label layoutX="358.0" layoutY="80.0" prefHeight="33.0" prefWidth="146.0" style="-fx-font-size: 16;" text="Data de Devolução:" textAlignment="RIGHT" />
+                        <Label layoutX="30.0" layoutY="110.0" prefHeight="33.0" prefWidth="101.0" style="-fx-font-size: 16;" text="Renovações:" textAlignment="RIGHT" />
+                        <Button layoutX="31.0" layoutY="154.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="162.0" styleClass="blueButton" text="Renovar" />
+                        <Rectangle arcWidth="5.0" fill="#33a13b" height="38.0" layoutX="620.0" layoutY="150.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="166.0" />
+                        <Label alignment="CENTER" layoutX="644.0" layoutY="153.0" prefHeight="33.0" prefWidth="118.0" style="-fx-font-weight: bold;" text="STATUS" textAlignment="CENTER" textFill="WHITE" />
+                        <Label layoutX="79.0" layoutY="20.0" prefHeight="33.0" prefWidth="709.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="85.0" layoutY="50.0" prefHeight="33.0" prefWidth="709.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="182.0" layoutY="80.0" prefHeight="33.0" prefWidth="165.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="498.0" layoutY="80.0" prefHeight="33.0" prefWidth="165.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                        <Label layoutX="123.0" layoutY="110.0" prefHeight="33.0" prefWidth="153.0" style="-fx-font-size: 16;" textAlignment="RIGHT" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ImageView fitHeight="88.0" fitWidth="200.0" layoutX="72.0" layoutY="4.0">
+=======
       <AnchorPane layoutX="240.0" layoutY="184.0" prefHeight="492.0" prefWidth="800.0" style="-fx-background-color: #ECF0F1;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="400.0" layoutX="27.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
@@ -33,6 +102,10 @@
          </children>
       </AnchorPane>
       <ImageView fx:id="logoImage" fitHeight="88.0" fitWidth="200.0" layoutX="72.0" layoutY="4.0" onMouseClicked="#goToHomeScreen">
+<<<<<<< Updated upstream
+=======
+>>>>>>> cf8ed7de329a463a586f09a1fdb4f8b04b94a200
+>>>>>>> Stashed changes
          <image>
             <Image url="@../img/menu-logo.png" />
          </image>
@@ -40,5 +113,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
+      <Label alignment="CENTER" layoutX="365.0" layoutY="118.0" prefHeight="54.0" prefWidth="550.0" style="-fx-font-size: 33; -fx-font-weight: bold;" text="EMPRÉSTIMOS" textAlignment="CENTER" />
    </children>
 </AnchorPane>
