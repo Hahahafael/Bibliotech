@@ -65,9 +65,9 @@ public class BookRegistrationController {
         int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
         java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue());
         Categoria categoria = new Categoria(categoryNumber, category);
-        Documento documento = new Documento(code, title, date, pages, language, categoria);
+        Livro documento = new Livro(code, title, date, pages, language, categoria, publisher, edition);
         DocumentoDAO documentoDAO = new DocumentoDAO(documento);
-        boolean resultado = documentoDAO.insert();
+        boolean resultado = documentoDAO.insertBookAndEbook();
 
         if (resultado) {
             System.out.println("Livro registrado com sucesso!");

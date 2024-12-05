@@ -69,7 +69,7 @@ public class MonographRegistrationController {
     Categoria categoriaObj = new Categoria(numeroCategoria, categoria);
     Monografia monografia = new Monografia(codigo, titulo, anoDePublicacao, paginas, idioma, categoriaObj, orientador, instituicao);
     DocumentoDAO monografiaDAO = new DocumentoDAO(monografia);
-    boolean resultado = monografiaDAO.insert();
+    boolean resultado = monografiaDAO.insertMonograph();
 
     if (resultado) {
       System.out.println("Monografia registrada com sucesso!");

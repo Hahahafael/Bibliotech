@@ -76,22 +76,52 @@ public class DocumentoDAO implements IDocumentoDAO {
   }
 
   @Override
-  public boolean insert() throws IOException {
-     try {
-        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
+  public boolean insertBookAndEbook() throws IOException{
+    try {
+        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT_EBOOK_BOOK);
         ps.setString(1, documento.getCodigo());
         ps.setString(2, documento.getTitulo());
         ps.setDate(3, new java.sql.Date(documento.getData().getTime()));
         ps.setInt(4, documento.getNumPaginas());
         ps.setString(5, documento.getIdioma());
-        ps.setInt(11, documento.getCategoria().getNumero());
+        ps.setInt(9, documento.getCategoria().getNumero());
+
       if (documento instanceof Livro) {
         Livro livro = (Livro) documento;
         ps.setString(6, livro.getEditora());
         ps.setInt(7, livro.getEdicao());
-        ps.setNull(8, java.sql.Types.VARCHAR);
-        ps.setNull(9, java.sql.Types.VARCHAR);
-        ps.setString(10, "Livro");
+        ps.setString(8, "Livro");
+      }
+      if (documento instanceof Ebook) {
+        Ebook ebook = (Ebook) documento;
+        ps.setString(6, ebook.getEditora());
+        ps.setInt(7, ebook.getEdicao());
+        ps.setString(8, "E-Book");
+      }
+      ps.executeUpdate();
+      return true;
+    } catch (SQLException e) {
+      System.out.println("Erro ao cadastrar documento. Exception: " + e.getMessage());
+      return false;
+    }
+  }
+
+  @Override
+  public boolean insertMonograph() throws IOException {
+    try {
+        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT_MONOGRAPH);
+        ps.setString(1, documento.getCodigo());
+        ps.setString(2, documento.getTitulo());
+        ps.setDate(3, new java.sql.Date(documento.getData().getTime()));
+        ps.setInt(4, documento.getNumPaginas());
+        ps.setString(5, documento.getIdioma());
+        ps.setInt(9, documento.getCategoria().getNumero());
+        
+      if (documento instanceof Monografia) {
+        Monografia monografia = (Monografia) documento;
+        ps.setString(6, monografia.getOrientador());
+        ps.setString(7, monografia.getInstituicao());
+        ps.setString(8, "Monografia");
       }
       ps.executeUpdate();
       return true;
