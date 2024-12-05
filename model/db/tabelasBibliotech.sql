@@ -80,4 +80,6 @@ CREATE TABLE Emprestado (
 );
 
 INSERT INTO Usuario
-VALUES (1,'admin','admin','admin','admin@email.com', null, null,'Ativo','Administrador');
+VALUES (0,'admin','admin','123','admin@email.com', null, null,'Ativo','Administrador');
+
+
