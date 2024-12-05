@@ -68,10 +68,10 @@ public class BookRegistrationController {
     DocumentoDAO documentoLivroDAO = new DocumentoDAO(documentoLivro);
     boolean resultadoDocumento = documentoLivroDAO.insert();
     Livro livro = new Livro(code, publisher, edition);
-    DocumentoDAO livroDAO = new DocumentoDAO(livro);
-    boolean resultado = livroDAO.insert();
+    DocumentoDAO documentoDAO = new DocumentoDAO(livro);
+    boolean resultado = documentoDAO.insert();
     if (resultado) {
-      boolean resultadoLivro = livroDAO.insert();
+      boolean resultadoLivro = documentoDAO.insert();
       if (resultadoDocumento && resultadoLivro) {
         System.out.println("Livro registrado com sucesso!");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));

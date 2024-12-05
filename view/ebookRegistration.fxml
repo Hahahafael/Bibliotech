@@ -14,7 +14,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EbookRegistrationController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="96.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
-      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" styleClass="blueButton" text="Voltar" textFill="WHITE">
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" text="Voltar" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -24,7 +24,7 @@
       </Button>
       <AnchorPane layoutX="192.0" layoutY="174.0" prefHeight="492.0" prefWidth="991.0" style="-fx-background-color: #ECF0F1;">
          <children>
-            <TextField fx:id="codeEbook" layoutX="350.0" layoutY="85.0" prefHeight="34.0" prefWidth="169.0" promptText="nº codigo" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="codeEbook" layoutX="350.0" layoutY="85.0" prefHeight="34.0" prefWidth="169.0" promptText="nº codigo">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -34,7 +34,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="titleEbook" layoutX="350.0" layoutY="165.0" prefHeight="40.0" prefWidth="611.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="titleEbook" layoutX="350.0" layoutY="165.0" prefHeight="40.0" prefWidth="611.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -44,7 +44,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <DatePicker fx:id="yearOfPublicationEbook" layoutX="553.0" layoutY="85.0" mouseTransparent="true" prefHeight="31.0" prefWidth="191.0" promptText="aaaa/mm/dd" stylesheets="@../styles/styleOfDataPicker.css">
+            <DatePicker fx:id="yearOfPublicationEbook" layoutX="553.0" layoutY="85.0" mouseTransparent="true" prefHeight="31.0" prefWidth="191.0" promptText="aaaa/mm/dd">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -59,7 +59,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="institutionEbook" layoutX="350.0" layoutY="245.0" prefHeight="34.0" prefWidth="611.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="institutionEbook" layoutX="350.0" layoutY="245.0" prefHeight="34.0" prefWidth="611.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -69,7 +69,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="registerButtonEbook" layoutX="849.0" layoutY="405.0" mnemonicParsing="false" onAction="#registerEbook" prefHeight="41.0" prefWidth="97.0" style="-fx-background-color: #2c3e50;" stylesheets="@../styles/styleOfButtons.css" text="Cadastrar" textFill="WHITE">
+            <Button fx:id="registerButtonEbook" layoutX="849.0" layoutY="405.0" mnemonicParsing="false" onAction="#registerEbook" prefHeight="41.0" prefWidth="97.0" style="-fx-background-color: #2c3e50;" text="Cadastrar" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="13.0" />
                </font>
@@ -77,7 +77,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="pageEbook" layoutX="60.0" layoutY="325.0" prefHeight="34.0" prefWidth="263.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="pageEbook" layoutX="60.0" layoutY="325.0" prefHeight="34.0" prefWidth="263.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -92,12 +92,12 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="languageEbook" layoutX="350.0" layoutY="325.0" prefHeight="34.0" prefWidth="608.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="languageEbook" layoutX="350.0" layoutY="325.0" prefHeight="34.0" prefWidth="608.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="categoryEbook" layoutX="60.0" layoutY="405.0" prefHeight="34.0" prefWidth="398.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="categoryEbook" layoutX="60.0" layoutY="405.0" prefHeight="34.0" prefWidth="398.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -117,7 +117,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="advisorEbook" layoutX="60.0" layoutY="245.0" prefHeight="34.0" prefWidth="271.0" stylesheets="@../styles/styleOfTextBar.css">
+            <TextField fx:id="advisorEbook" layoutX="60.0" layoutY="245.0" prefHeight="34.0" prefWidth="271.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -132,7 +132,10 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="searchFileButtonEbook" layoutX="796.0" layoutY="91.0" mnemonicParsing="false" onAction="#searchFileEbook" stylesheets="@../styles/styleOfButtons.css" text="Procurar arquivo" />
+            <Button fx:id="searchFileButtonEbook" layoutX="796.0" layoutY="91.0" mnemonicParsing="false" onAction="#searchFileEbook" text="Procurar arquivo">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
          </children>
       </AnchorPane>
       <Label layoutX="469.0" layoutY="106.0" style="-fx-font-weight: bold;" text="CADASTRO DE E-BOOK">
