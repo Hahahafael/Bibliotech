@@ -14,7 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.dao.classes.MonografiaDAO;
+import model.dao.classes.DocumentoDAO;
 import model.entities.Categoria;
 import model.entities.Monografia;
 
@@ -72,7 +72,7 @@ public class MonographRegistrationController {
 
     Categoria categoriaObj = new Categoria(numeroCategoria, categoria);
     Monografia monografia = new Monografia(codigo, titulo, anoDePublicacao, paginas, idioma, categoriaObj, orientador, instituicao);
-    MonografiaDAO monografiaDAO = new MonografiaDAO(monografia);
+    DocumentoDAO monografiaDAO = new DocumentoDAO(monografia);
     boolean resultado = monografiaDAO.insert();
 
     if (resultado) {
