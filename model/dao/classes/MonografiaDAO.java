@@ -35,7 +35,6 @@ public class MonografiaDAO implements IMonografiaDAO {
         documentoMonografia.find();
         monografia.setTitulo(documentoMonografia.getDocumento().getTitulo());
         monografia.setData(documentoMonografia.getDocumento().getData());
-        monografia.setCapa(documentoMonografia.getDocumento().getCapa());
         monografia.setNumPaginas(documentoMonografia.getDocumento().getNumPaginas());
         monografia.setIdioma(documentoMonografia.getDocumento().getIdioma());
         monografia.setCategoria(documentoMonografia.getDocumento().getCategoria());

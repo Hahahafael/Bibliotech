@@ -1,8 +1,5 @@
 package controller;
-
-import java.io.File;
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,9 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.dao.classes.DocumentoDAO;
 import model.dao.classes.LivroDAO;
@@ -23,30 +17,17 @@ import model.entities.Documento;
 import model.entities.Livro;
 
 public class BookRegistrationController {
-  @FXML
-  ImageView ImageViewBookRegistration;
-  @FXML
-  Button addPhotoButtonBookResgistration;
-  @FXML
-  TextField codeBookRegistration;
-  @FXML
-  TextField titleBookRegistration;
-  @FXML
-  TextField publisherBookRegistration;
-  @FXML
-  TextField editionBookRegistration;
-  @FXML
-  TextField pagesBookRegistration;
-  @FXML
-  TextField languageBookRegistration;
-  @FXML
-  TextField categoryBookRegistration;
-  @FXML
-  TextField categoryNumberBookRegistration;
-  @FXML
-  Button buttonBookRegistration;
-  @FXML
-  DatePicker dateBookRegistration;
+  @FXML Button addPhotoButtonBookResgistration;
+  @FXML TextField codeBookRegistration;
+  @FXML TextField titleBookRegistration;
+  @FXML TextField publisherBookRegistration;
+  @FXML TextField editionBookRegistration;
+  @FXML TextField pagesBookRegistration;
+  @FXML TextField languageBookRegistration;
+  @FXML TextField categoryBookRegistration;
+  @FXML TextField categoryNumberBookRegistration;
+  @FXML Button buttonBookRegistration;
+  @FXML DatePicker dateBookRegistration;
 
   private Stage window;
   private Scene scene;
@@ -67,25 +48,6 @@ public class BookRegistrationController {
   }
 
   /**
-   * the "edite" button can chose a photo file in your PC
-   * 
-   * @param event the triggered event, usually a click on a button.
-   * @throws IOException if an error occurs while loading the FXML file from the
-   *                     home screen.
-   */
-  public void selectImage(ActionEvent event) throws IOException {
-    FileChooser fileChooser = new FileChooser();
-    FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Imagens (JPG, PNG, GIF)", "*.jpg",
-        "*.jpeg", "*.png", "*.gif");
-    fileChooser.getExtensionFilters().add(imageFilter);
-    File selectedFile = fileChooser.showOpenDialog(null);
-    if (selectedFile != null) {
-      Image image = new Image(selectedFile.toURI().toString());
-      ImageViewBookRegistration.setImage(image);
-    }
-  }
-
-  /**
    * Registers a book in the system.
    * 
    * @param event the triggered event, usually a click on a button.
@@ -101,21 +63,16 @@ public class BookRegistrationController {
     String language = languageBookRegistration.getText();
     String category = categoryBookRegistration.getText();
     int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
-    java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue()); // Convertendo para Date
-
+    java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue()); 
     Categoria categoria = new Categoria(categoryNumber, category);
-
-    Documento documentoLivro = new Documento(code, title, date, null, pages, language, categoria);
+    Documento documentoLivro = new Documento(code, title, date, pages, language, categoria);
     DocumentoDAO documentoLivroDAO = new DocumentoDAO(documentoLivro);
     boolean resultadoDocumento = documentoLivroDAO.insert();
-
     Livro livro = new Livro(code, publisher, edition);
     LivroDAO livroDAO = new LivroDAO(livro);
     boolean resultado = livroDAO.insert();
-
     if (resultado) {
       boolean resultadoLivro = livroDAO.insert();
-
       if (resultadoDocumento && resultadoLivro) {
         System.out.println("Livro registrado com sucesso!");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));

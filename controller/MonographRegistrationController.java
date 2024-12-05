@@ -1,9 +1,6 @@
 package controller;
 
-import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,17 +10,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.dao.classes.MonografiaDAO;
 import model.entities.Categoria;
 import model.entities.Monografia;
 
 public class MonographRegistrationController {
-  @FXML ImageView ImageViewMonographRegistration;
-
   @FXML TextField codeMonograph;
   @FXML TextField titleMonograph;
   @FXML TextField advisorMonograph;
@@ -55,22 +47,6 @@ public class MonographRegistrationController {
   }
 
   
-  /**
-   * the "edite" button can chose a photo file in your PC
-   * @param event the triggered event, usually a click on a button.
-   * @throws IOException IOException if an error occurs while trying to access or read the selected file, 
-   *                     or if the application encounters an issue while processing the file's URI.
-   */
-  public void selectImage(ActionEvent event) throws IOException {
-    FileChooser fileChooser = new FileChooser();
-    FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Imagens (JPG, PNG, GIF)", "*.jpg", "*.jpeg", "*.png", "*.gif");
-    fileChooser.getExtensionFilters().add(imageFilter);
-    File selectedFile = fileChooser.showOpenDialog(null);
-    if (selectedFile != null) {
-      Image image = new Image(selectedFile.toURI().toString());
-      ImageViewMonographRegistration.setImage(image);
-    }
-  }
 
   /**
    * register the monograph
@@ -91,7 +67,7 @@ public class MonographRegistrationController {
     java.sql.Date anoDePublicacao = java.sql.Date.valueOf(yearOfPublicationMonograph.getValue());
 
     Categoria categoriaObj = new Categoria(numeroCategoria, categoria);
-    Monografia monografia = new Monografia(codigo, titulo, anoDePublicacao, null, paginas, idioma, categoriaObj, orientador, instituicao);
+    Monografia monografia = new Monografia(codigo, titulo, anoDePublicacao, paginas, idioma, categoriaObj, orientador, instituicao);
     MonografiaDAO monografiaDAO = new MonografiaDAO(monografia);
     boolean resultado = monografiaDAO.insert();
 

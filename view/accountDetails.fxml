@@ -4,15 +4,16 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountDetailsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountDetailsController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="118.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
-      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" stylesheets="@../styles/styleOfButtons.css" text="Voltar" textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="96.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" styleClass="blueButton" text="Voltar" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -22,22 +23,22 @@
       </Button>
       <AnchorPane layoutX="279.0" layoutY="184.0" prefHeight="492.0" prefWidth="723.0" style="-fx-background-color: #ECF0F1;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="39.0" layoutX="439.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="159.0" layoutX="32.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="39.0" layoutX="439.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="159.0" layoutX="32.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
             <ImageView fitHeight="142.0" fitWidth="145.0" layoutX="40.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c3e50" height="223.0" layoutX="39.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="649.0" />
-            <Button layoutX="598.0" layoutY="267.0" minHeight="11.0" minWidth="66.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="66.0" stylesheets="@../styles/styleOfButtons.css" text="Editar" />
-            <Button layoutX="125.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" stylesheets="@../styles/styleOfEditButtons.css" text="editar" />
-            <TextField fx:id="nameAccountDatails" editable="false" layoutX="135.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField fx:id="loginAccountDatails" editable="false" layoutX="135.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField fx:id="passwordAccountDatails" editable="false" layoutX="395.0" layoutY="275.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField fx:id="emailAccountDatails" editable="false" layoutX="135.0" layoutY="385.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <TextField fx:id="phoneAccountDatails" editable="false" layoutX="395.0" layoutY="330.0" stylesheets="@../styles/styleOfTextBar.css" />
-            <Label layoutX="80.0" layoutY="285.0" text="Nome" textFill="WHITE" />
-            <Label layoutX="80.0" layoutY="340.0" text="Login" textFill="WHITE" />
-            <Label layoutX="340.0" layoutY="282.0" text="Senha" textFill="WHITE" />
-            <Label layoutX="80.0" layoutY="395.0" text="Email" textFill="WHITE" />
-            <Label layoutX="334.0" layoutY="340.0" text="Telefone" textFill="WHITE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="223.0" layoutX="39.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="649.0" />
+            <Button layoutX="608.0" layoutY="434.0" minHeight="11.0" minWidth="66.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" styleClass="goldButton" text="Editar" />
+            <Button layoutX="125.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="goldButton" text="editar" />
+            <TextField fx:id="nameAccountDatails" layoutX="135.0" layoutY="275.0" prefHeight="40.0" prefWidth="187.0" styleClass="textField" />
+            <TextField fx:id="loginAccountDatails" layoutX="135.0" layoutY="330.0" prefHeight="40.0" prefWidth="187.0" styleClass="textField" />
+            <TextField fx:id="passwordAccountDatails" layoutX="395.0" layoutY="275.0" prefHeight="31.0" prefWidth="187.0" styleClass="textField" />
+            <TextField fx:id="emailAccountDatails" layoutX="135.0" layoutY="385.0" prefHeight="40.0" prefWidth="187.0" styleClass="textField" />
+            <TextField fx:id="phoneAccountDatails" layoutX="395.0" layoutY="330.0" prefHeight="31.0" prefWidth="187.0" styleClass="textField" />
+            <Label layoutX="92.0" layoutY="285.0" text="Nome" textFill="WHITE" />
+            <Label layoutX="94.0" layoutY="340.0" text="Login" textFill="WHITE" />
+            <Label layoutX="350.0" layoutY="285.0" text="Senha" textFill="WHITE" />
+            <Label layoutX="94.0" layoutY="395.0" text="Email" textFill="WHITE" />
+            <Label layoutX="335.0" layoutY="340.0" text="Telefone" textFill="WHITE" />
             <Label layoutX="457.0" layoutY="104.0" text="STATUS DA CONTA:" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -45,9 +46,14 @@
             <Label fx:id="statusLabel" layoutX="572.0" layoutY="104.0" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <Button layoutX="1062.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToLoanScreen" prefHeight="73.0" prefWidth="166.0" style="-fx-background-color: #95A5A6;" text="Emprestimos" textFill="WHITE">
+      <Button layoutX="1063.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToLoanScreen" prefHeight="73.0" prefWidth="166.0" styleClass="goldButton" text="Emprestimos" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font></Button>
+      <ImageView fitHeight="88.0" fitWidth="200.0" layoutX="72.0" layoutY="4.0">
+         <image>
+            <Image url="@../img/menu-logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

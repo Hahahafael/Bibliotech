@@ -1,15 +1,8 @@
 package model.dao.classes;
-
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import javax.imageio.ImageIO;
-
 import model.dao.interfaces.IDocumentoDAO;
 import model.db.ConnectionFactory;
 import model.entities.Categoria;
@@ -36,13 +29,6 @@ public class DocumentoDAO implements IDocumentoDAO {
       if(rs.next()) {
         documento.setCodigo(rs.getString(1));
         documento.setTitulo(rs.getString(2));
-
-        byte[] imagemEmBytes = rs.getBytes(3);
-        if (imagemEmBytes != null){
-          ByteArrayInputStream bais = new ByteArrayInputStream(imagemEmBytes);
-          BufferedImage imagem = ImageIO.read(bais);
-          documento.setCapa(imagem);
-        }
         documento.setData(rs.getDate(4));
         documento.setNumPaginas(rs.getInt(5));
         documento.setIdioma(rs.getString(6));
@@ -65,10 +51,6 @@ public class DocumentoDAO implements IDocumentoDAO {
 
   @Override
   public boolean insert() throws IOException {
-    
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    ImageIO.write(documento.getCapa(), "png", baos);
-    byte[] imagemEmBytes = baos.toByteArray();
 
     java.sql.Date sqlDate = new java.sql.Date(documento.getData().getTime());
 
@@ -76,7 +58,6 @@ public class DocumentoDAO implements IDocumentoDAO {
         PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(SQL_INSERT);
         ps.setString(1, documento.getCodigo());
         ps.setString(2, documento.getTitulo());
-        ps.setBytes(3, imagemEmBytes);
         ps.setDate(4, sqlDate);
         ps.setInt(5, documento.getNumPaginas());
         ps.setString(6, documento.getIdioma());

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Medium.ttf');
+}
+
+.button, .deselected {
+  -fx-font-family: 'Gotham';
+  -fx-background-color: transparent;
+  -fx-text-fill: black;
+  -fx-effect: none; 
+}
+
+.selected {
+  -fx-font-weight: bold;
+}
+
+.button:hover, .deselected:hover, .selected:hover {
+  -fx-effect: none; 
+}

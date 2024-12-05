@@ -1,6 +1,4 @@
 package model.entities;
-
-import java.awt.image.BufferedImage;
 import java.util.Date;
 
 public class Livro extends Documento{
@@ -8,8 +6,8 @@ public class Livro extends Documento{
     private int edicao;
 
     // Construtor
-    public Livro(String codigo, String titulo, Date data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria, String editora, int edicao) {
-        super(codigo, titulo, data, capa, numPaginas, idioma, categoria);
+    public Livro(String codigo, String titulo, Date data, int numPaginas, String idioma, Categoria categoria, String editora, int edicao) {
+        super(codigo, titulo, data, numPaginas, idioma, categoria);
         this.editora = editora;
         this.edicao = edicao;
     }

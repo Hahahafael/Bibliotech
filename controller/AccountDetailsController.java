@@ -1,5 +1,4 @@
 package controller;
-
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,8 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Session; 
-import model.Session; 
+import model.Session;  
 import model.entities.Usuario;
 
 public class AccountDetailsController {
@@ -32,16 +30,14 @@ public class AccountDetailsController {
      * @throws IOException If an error occurs while loading the FXML file from the screen.
      */
     public void initialize() {
-        // Get the logged in user from the Session class
         Usuario usuarioLogado = Session.getUsuarioLogado();
-        
         if (usuarioLogado != null) {
-            // Fill in the text fields with the logged in account information
             nameAccountDatails.setText(usuarioLogado.getNome());
             loginAccountDatails.setText(usuarioLogado.getLogin());
             emailAccountDatails.setText(usuarioLogado.getEmail());
             phoneAccountDatails.setText(usuarioLogado.getTelefone());
             passwordAccountDatails.setText(usuarioLogado.getSenha());
+            statusLabel.setText(usuarioLogado.getStatusDaConta());
         } else {
             System.out.println("Nenhum usuário logado!");
         }

@@ -35,7 +35,6 @@ public class EbookDAO implements IEbookDAO{
         documentoEbook.find();
         ebook.setTitulo(documentoEbook.getDocumento().getTitulo());
         ebook.setData(documentoEbook.getDocumento().getData());
-        ebook.setCapa(documentoEbook.getDocumento().getCapa());
         ebook.setNumPaginas(documentoEbook.getDocumento().getNumPaginas());
         ebook.setIdioma(documentoEbook.getDocumento().getIdioma());
         ebook.setCategoria(documentoEbook.getDocumento().getCategoria());
