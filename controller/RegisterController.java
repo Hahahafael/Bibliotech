@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Session;
 import model.dao.classes.UsuarioDAO;
 import model.entities.Usuario;
 
@@ -91,6 +92,7 @@ public class RegisterController {
         boolean resultado = usuarioDAO.insert();
         if (resultado) {
             System.out.println("Usuário registrado com sucesso!");
+            Session.setUsuarioLogado(novoUsuario);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
             Parent root = loader.load();
             window = (Stage) ((Node) event.getSource()).getScene().getWindow();
