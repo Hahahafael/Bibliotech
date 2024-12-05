@@ -35,7 +35,6 @@ public class LivroDAO implements ILivroDAO {
         documentoLivro.find();
         livro.setTitulo(documentoLivro.getDocumento().getTitulo());
         livro.setData(documentoLivro.getDocumento().getData());
-        livro.setCapa(documentoLivro.getDocumento().getCapa());
         livro.setNumPaginas(documentoLivro.getDocumento().getNumPaginas());
         livro.setIdioma(documentoLivro.getDocumento().getIdioma());
         livro.setCategoria(documentoLivro.getDocumento().getCategoria());

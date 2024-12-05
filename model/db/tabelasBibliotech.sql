@@ -26,7 +26,6 @@ CREATE TABLE Categoria (
 CREATE TABLE Documento (
     cod_documento VARCHAR(30) PRIMARY KEY,
     titulo VARCHAR(50) NOT NULL,
-    capa BYTEA,
     data_publicacao DATE,
     num_paginas INT,
     idioma VARCHAR(13),

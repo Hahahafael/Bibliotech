@@ -1,22 +1,19 @@
 package model.entities;
 
 import java.util.Date;
-import java.awt.image.BufferedImage;
 
 public class Documento {
     private String codigo;
     private String titulo;
     private Date data;
-    private BufferedImage capa;
     private int numPaginas;
     private String idioma;
     private Categoria categoria;
 
-    public Documento(String codigo, String titulo, Date data, BufferedImage capa, int numPaginas, String idioma, Categoria categoria) {
+    public Documento(String codigo, String titulo, Date data, int numPaginas, String idioma, Categoria categoria) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.data = data;
-        this.capa = capa;
         this.numPaginas = numPaginas;
         this.idioma = idioma;
         this.categoria = categoria;
@@ -48,14 +45,6 @@ public class Documento {
 
     public void setData(Date data) {
         this.data = data;
-    }
-
-    public BufferedImage getCapa() {
-        return capa;
-    }
-
-    public void setCapa(BufferedImage capa) {
-        this.capa = capa;
     }
 
     public int getNumPaginas() {
