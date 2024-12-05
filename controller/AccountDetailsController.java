@@ -1,5 +1,4 @@
 package controller;
-
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,8 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Session; 
-import model.Session; 
+import model.Session;  
 import model.entities.Usuario;
 
 public class AccountDetailsController {
