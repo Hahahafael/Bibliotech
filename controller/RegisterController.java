@@ -53,9 +53,14 @@ public class RegisterController {
         window.show();
     }
 
-    // Método chamado ao clicar na logo
+    /**
+    * Navigates to the home screen when the logo is clicked.
+    * 
+    * @param event the event triggered by clicking the logo image.
+    * @throws IOException if an error occurs while loading the FXML file for the home screen.
+    */
     public void goToHomeScreen(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml")); // Ajuste o caminho para o seu arquivo FXML da tela inicial
+        Parent root = FXMLLoader.load(getClass().getResource("/view/homeScreen.fxml")); 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
