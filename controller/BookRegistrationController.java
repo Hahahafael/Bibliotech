@@ -66,14 +66,11 @@ public class BookRegistrationController {
     String language = languageBookRegistration.getText();
     String category = categoryBookRegistration.getText();
     int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
-    java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue()); // Convertendo para Date
-
+    java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue()); 
     Categoria categoria = new Categoria(categoryNumber, category);
-
     Documento documentoLivro = new Documento(code, title, date, pages, language, categoria);
     DocumentoDAO documentoLivroDAO = new DocumentoDAO(documentoLivro);
     boolean resultadoDocumento = documentoLivroDAO.insert();
-
     Livro livro = new Livro(code, publisher, edition);
     LivroDAO livroDAO = new LivroDAO(livro);
     boolean resultado = livroDAO.insert();
