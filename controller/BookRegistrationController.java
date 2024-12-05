@@ -67,7 +67,7 @@ public class BookRegistrationController {
         Categoria categoria = new Categoria(categoryNumber, category);
         Documento documento = new Documento(code, title, date, pages, language, categoria);
         DocumentoDAO documentoDAO = new DocumentoDAO(documento);
-        boolean resultado = documentoDAO.insert();
+        boolean resultado = documentoDAO.insertBookAndEbook();
 
         if (resultado) {
             System.out.println("Livro registrado com sucesso!");
