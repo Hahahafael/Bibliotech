@@ -32,16 +32,14 @@ public class AccountDetailsController {
      * @throws IOException If an error occurs while loading the FXML file from the screen.
      */
     public void initialize() {
-        // Get the logged in user from the Session class
         Usuario usuarioLogado = Session.getUsuarioLogado();
-        
         if (usuarioLogado != null) {
-            // Fill in the text fields with the logged in account information
             nameAccountDatails.setText(usuarioLogado.getNome());
             loginAccountDatails.setText(usuarioLogado.getLogin());
             emailAccountDatails.setText(usuarioLogado.getEmail());
             phoneAccountDatails.setText(usuarioLogado.getTelefone());
             passwordAccountDatails.setText(usuarioLogado.getSenha());
+            statusLabel.setText(usuarioLogado.getStatusDaConta());
         } else {
             System.out.println("Nenhum usuário logado!");
         }
