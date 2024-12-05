@@ -1,4 +1,5 @@
 package controller;
+
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -55,35 +56,36 @@ public class BookRegistrationController {
    */
   public void registerBook(ActionEvent event) throws IOException {
     try {
-        String code = codeBookRegistration.getText();
-        String title = titleBookRegistration.getText();
-        String publisher = publisherBookRegistration.getText();
-        int edition = Integer.parseInt(editionBookRegistration.getText());
-        int pages = Integer.parseInt(pagesBookRegistration.getText());
-        String language = languageBookRegistration.getText();
-        String category = categoryBookRegistration.getText();
-        int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
-        java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue());
-        Categoria categoria = new Categoria(categoryNumber, category);
-        Livro documento = new Livro(code, title, date, pages, language, categoria, publisher, edition);
-        DocumentoDAO documentoDAO = new DocumentoDAO(documento);
-        boolean resultado = documentoDAO.insertBookAndEbook();
+      String code = codeBookRegistration.getText();
+      String title = titleBookRegistration.getText();
+      String publisher = publisherBookRegistration.getText();
+      int edition = Integer.parseInt(editionBookRegistration.getText());
+      int pages = Integer.parseInt(pagesBookRegistration.getText());
+      String language = languageBookRegistration.getText();
+      String category = categoryBookRegistration.getText();
+      int categoryNumber = Integer.parseInt(categoryNumberBookRegistration.getText());
+      java.sql.Date date = java.sql.Date.valueOf(dateBookRegistration.getValue());
 
-        if (resultado) {
-            System.out.println("Livro registrado com sucesso!");
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
-            Parent root = loader.load();
-            window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            window.setScene(scene);
-            window.show();
-        } else {
-            System.out.println("Erro ao registrar o livro.");
-        }
+      Categoria categoria = new Categoria(categoryNumber, category);
+      Livro documento = new Livro(code, title, date, pages, language, categoria, publisher, edition);
+      DocumentoDAO documentoDAO = new DocumentoDAO(documento);
+      boolean resultado = documentoDAO.insertBookAndEbook();
+
+      if (resultado) {
+        System.out.println("Livro registrado com sucesso!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/chooseDocument.fxml"));
+        Parent root = loader.load();
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+      } else {
+        System.out.println("Erro ao registrar o livro.");
+      }
     } catch (NumberFormatException e) {
-        System.out.println("Erro: Verifique os valores numéricos inseridos.");
+      System.out.println("Erro: Verifique os valores numéricos inseridos.");
     } catch (Exception e) {
-        System.out.println("Erro ao registrar o livro. Exception: " + e.getMessage());
+      System.out.println("Erro ao registrar o livro. Exception: " + e.getMessage());
     }
   }
 }

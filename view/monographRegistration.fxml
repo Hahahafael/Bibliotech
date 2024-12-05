@@ -43,7 +43,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <DatePicker fx:id="yearOfPublicationMonograph" layoutX="340.0" layoutY="85.0" prefHeight="31.0" prefWidth="191.0" promptText="aaaa/mm/dd" stylesheets="@../styles/styleOfDataPicker.css">
+            <DatePicker fx:id="yearOfPublicationMonograph" layoutX="340.0" layoutY="85.0" prefHeight="31.0" prefWidth="191.0" promptText="dd/mm/aaaa" stylesheets="@../styles/styleOfDataPicker.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

@@ -44,7 +44,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <DatePicker fx:id="dateBookRegistration" layoutX="340.0" layoutY="85.0" prefHeight="31.0" prefWidth="299.0" promptText="aaaa/mm/dd" stylesheets="@../styles/styleOfDataPicker.css">
+            <DatePicker fx:id="dateBookRegistration" layoutX="340.0" layoutY="85.0" prefHeight="31.0" prefWidth="299.0" promptText="dd/mm/aaaa" stylesheets="@../styles/styleOfDataPicker.css">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -102,7 +102,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="categoryNumberBookRegistration" layoutX="475.0" layoutY="405.0" onAction="#registerBook" prefHeight="34.0" prefWidth="346.0" styleClass="textField">
+            <TextField fx:id="categoryNumberBookRegistration" layoutX="475.0" layoutY="405.0" prefHeight="34.0" prefWidth="346.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>

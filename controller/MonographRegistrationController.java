@@ -56,31 +56,36 @@ public class MonographRegistrationController {
    *                     (e.g., FXML files, external configurations) needed for the registration process.
    */
   public void registerMonograph(ActionEvent event) throws IOException {
-    String codigo = codeMonograph.getText();
-    String titulo = titleMonograph.getText();
-    String orientador = advisorMonograph.getText();
-    String instituicao = institutionMonograph.getText();
-    int paginas = Integer.parseInt(pageMonograph.getText());
-    String idioma = languageMonograph.getText();
-    String categoria = categoryMonograph.getText();
-    int numeroCategoria = Integer.parseInt(categoryNumberMonograph.getText());
-    java.sql.Date anoDePublicacao = java.sql.Date.valueOf(yearOfPublicationMonograph.getValue());
-
-    Categoria categoriaObj = new Categoria(numeroCategoria, categoria);
-    Monografia monografia = new Monografia(codigo, titulo, anoDePublicacao, paginas, idioma, categoriaObj, orientador, instituicao);
-    DocumentoDAO monografiaDAO = new DocumentoDAO(monografia);
-    boolean resultado = monografiaDAO.insertMonograph();
-
-    if (resultado) {
-      System.out.println("Monografia registrada com sucesso!");
-      FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/homeScreen.fxml"));
-      Parent root = loader.load();
-      window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-      scene = new Scene(root);
-      window.setScene(scene);
-      window.show();
-    } else {
-      System.out.println("Erro ao registrar monografia.");
+    try {
+      String codigo = codeMonograph.getText();
+      String titulo = titleMonograph.getText();
+      String orientador = advisorMonograph.getText();
+      String instituicao = institutionMonograph.getText();
+      int paginas = Integer.parseInt(pageMonograph.getText());
+      String idioma = languageMonograph.getText();
+      String categoria = categoryMonograph.getText();
+      int numeroCategoria = Integer.parseInt(categoryNumberMonograph.getText());
+      java.sql.Date anoDePublicacao = java.sql.Date.valueOf(yearOfPublicationMonograph.getValue());
+  
+      Categoria categoriaObj = new Categoria(numeroCategoria, categoria);
+      Monografia monografia = new Monografia(codigo, titulo, anoDePublicacao, paginas, idioma, categoriaObj, orientador, instituicao);
+      DocumentoDAO monografiaDAO = new DocumentoDAO(monografia);
+      boolean resultado = monografiaDAO.insertMonograph();
+  
+      if (resultado) {
+        System.out.println("Monografia registrada com sucesso!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/chooseDocument.fxml"));
+        Parent root = loader.load();
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+      } 
+      
+    } catch (NumberFormatException e) {
+      System.out.println("Erro: Verifique os valores numéricos inseridos.");
+    } catch (Exception e) {
+      System.out.println("Erro ao registrar a monografia. Exception: " + e.getMessage());
     }
   }
 }

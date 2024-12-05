@@ -12,19 +12,22 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import model.dao.classes.DocumentoDAO;
+import model.entities.Categoria;
+import model.entities.Ebook;
 
 
 public class EbookRegistrationController {
   @FXML ImageView ImageViewEBookRegistration;
-  @FXML TextField codeEbook;
-  @FXML TextField titleEbook;
-  @FXML TextField advisorEbook;
-  @FXML TextField institutionEbook;
-  @FXML TextField pageEbook;
-  @FXML TextField languageEbook;
-  @FXML TextField categoryEbook;
-  @FXML TextField categoryNumberEbook;
-  @FXML DatePicker yearOfPublicationEbook; 
+  @FXML TextField codeEbookRegistration;
+  @FXML TextField titleEbookRegistration;
+  @FXML TextField publisherEbookRegistration;
+  @FXML TextField editionEbookRegistration;
+  @FXML TextField pagesEbookRegistration;
+  @FXML TextField languageEbookRegistration;
+  @FXML TextField categoryEbookRegistration;
+  @FXML TextField categoryNumberEbookRegistration;
+  @FXML DatePicker dateEbookRegistration;
   @FXML Button registerButtonEbook;
   @FXML Button addPhotoButtonEBookResgistration;
   @FXML Button searchFileButtonEbook;
@@ -67,6 +70,38 @@ public class EbookRegistrationController {
    *                     (e.g., FXML files, external configurations) needed for the registration process.
    */
   public void registerEbook(ActionEvent event) throws IOException {
-    System.out.println("botao de cadastrar ebook");
+    try {
+      String code = codeEbookRegistration.getText();
+      String title = titleEbookRegistration.getText();
+      String publisher = publisherEbookRegistration.getText();
+      int edition = Integer.parseInt(editionEbookRegistration.getText());
+      int pages = Integer.parseInt(pagesEbookRegistration.getText());
+      String language = languageEbookRegistration.getText();
+      String category = categoryEbookRegistration.getText();
+      int categoryNumber = Integer.parseInt(categoryNumberEbookRegistration.getText());
+      java.sql.Date date = java.sql.Date.valueOf(dateEbookRegistration.getValue());
+  
+      Categoria categoria = new Categoria(categoryNumber, category);
+      Ebook ebook = new Ebook(code, title, date, pages, language, categoria, publisher, edition);
+      DocumentoDAO documentoDAO = new DocumentoDAO(ebook);
+      boolean resultado = documentoDAO.insertBookAndEbook();
+  
+      if(resultado) {
+        System.out.println("E-book registrado com sucesso!");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/chooseDocument.fxml"));
+        Parent root = loader.load();
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+      }else {
+        System.out.println("Erro ao registrar o e-book.");
+      }
+      
+    } catch (NumberFormatException e) {
+      System.out.println("Erro: Verifique os valores numéricos inseridos.");
+    } catch (Exception e) {
+      System.out.println("Erro ao registrar o e-book. Exception: " + e.getMessage());
+    }
   }
  }

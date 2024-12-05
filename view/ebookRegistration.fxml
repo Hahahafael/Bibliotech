@@ -24,46 +24,6 @@
       </Button>
       <AnchorPane layoutX="192.0" layoutY="174.0" prefHeight="492.0" prefWidth="991.0" style="-fx-background-color: #ECF0F1;">
          <children>
-            <TextField fx:id="codeEbook" layoutX="50.0" layoutY="85.0" prefHeight="34.0" prefWidth="169.0" promptText="nº codigo" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Label layoutX="50.0" layoutY="50.0" text="Código*">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="titleEbook" layoutX="50.0" layoutY="165.0" prefHeight="40.0" prefWidth="902.0" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Label layoutX="50.0" layoutY="130.0" text="Titulo">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <DatePicker fx:id="yearOfPublicationEbook" layoutX="266.0" layoutY="85.0" prefHeight="31.0" prefWidth="191.0" promptText="aaaa/mm/dd" stylesheets="@../styles/styleOfDataPicker.css">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </DatePicker>
-            <Label layoutX="266.0" layoutY="50.0" text="Ano de Publicação">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="institutionEbook" layoutX="50.0" layoutY="325.0" prefHeight="34.0" prefWidth="611.0" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Label layoutX="50.0" layoutY="290.0" text="Instituição">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
             <Button fx:id="registerButtonEbook" layoutX="858.0" layoutY="404.0" mnemonicParsing="false" onAction="#registerEbook" prefHeight="41.0" prefWidth="97.0" styleClass="goldButton" text="Cadastrar" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="13.0" />
@@ -72,56 +32,6 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="pageEbook" layoutX="477.0" layoutY="85.0" prefHeight="34.0" prefWidth="263.0" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Label layoutX="477.0" layoutY="50.0" text="Número de páginas">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="695.0" layoutY="290.0" text="Idioma">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="languageEbook" layoutX="695.0" layoutY="325.0" prefHeight="34.0" prefWidth="263.0" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <TextField fx:id="categoryEbook" layoutX="50.0" layoutY="405.0" prefHeight="34.0" prefWidth="398.0" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Label layoutX="50.0" layoutY="370.0" text="Categoria">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="categoryNumberEbook" layoutX="475.0" layoutY="405.0" prefHeight="41.0" prefWidth="360.0" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Label layoutX="477.0" layoutY="370.0" text="Nº Categoria">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="advisorEbook" layoutX="50.0" layoutY="245.0" prefHeight="34.0" prefWidth="902.0" styleClass="textField">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <Label layoutX="50.0" layoutY="210.0" text="Orientador">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
             <Label layoutX="798.0" layoutY="50.0" text="Anexar arquivo">
                <font>
                   <Font size="18.0" />
@@ -131,6 +41,96 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
+            <TextField fx:id="codeEbookRegistration" layoutX="47.0" layoutY="79.0" prefHeight="42.0" prefWidth="263.0" promptText="nº codigo" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="47.0" layoutY="44.0" text="Código*">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titleEbookRegistration" layoutX="47.0" layoutY="159.0" prefHeight="42.0" prefWidth="910.0" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="47.0" layoutY="124.0" text="Titulo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateEbookRegistration" layoutX="337.0" layoutY="79.0" prefHeight="31.0" prefWidth="299.0" promptText="dd/mm/aaaa" stylesheets="@../styles/styleOfDataPicker.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </DatePicker>
+            <Label layoutX="337.0" layoutY="44.0" text="Ano de Publicação">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="publisherEbookRegistration" layoutX="347.0" layoutY="239.0" prefHeight="34.0" prefWidth="611.0" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="347.0" layoutY="204.0" text="Editora">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pagesEbookRegistration" layoutX="47.0" layoutY="319.0" prefHeight="34.0" prefWidth="263.0" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="47.0" layoutY="284.0" text="Número de páginas">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="347.0" layoutY="284.0" text="Idioma">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="languageEbookRegistration" layoutX="347.0" layoutY="319.0" prefHeight="34.0" prefWidth="608.0" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="categoryEbookRegistration" layoutX="47.0" layoutY="399.0" prefHeight="34.0" prefWidth="398.0" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="47.0" layoutY="364.0" text="Categoria">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="categoryNumberEbookRegistration" layoutX="472.0" layoutY="399.0" prefHeight="34.0" prefWidth="346.0" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="474.0" layoutY="364.0" text="Nº Categoria">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editionEbookRegistration" layoutX="47.0" layoutY="239.0" prefHeight="34.0" prefWidth="271.0" styleClass="textField">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="47.0" layoutY="204.0" text="Edição">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <Label layoutX="469.0" layoutY="106.0" style="-fx-font-weight: bold;" text="CADASTRO DE E-BOOK">
