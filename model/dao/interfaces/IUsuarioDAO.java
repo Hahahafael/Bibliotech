@@ -7,10 +7,13 @@ public interface IUsuarioDAO {
   String SQL_DELETE = "DELETE FROM Usuario WHERE id_usuario = ?";
   String SQL_SELECT_BY_ID = "SELECT * FROM Usuario WHERE id_usuario = ?";
   String SQL_SELECT_BY_LOGIN = "SELECT * FROM Usuario WHERE login = ? AND senha = ?";
+  String SQL_SELECT_BY_LOGIN_ONLY = "SELECT id_usuario, nome, login, senha, email, telefone, multa_acumulada, status_da_conta, tipo FROM Usuario WHERE login = ?";
 
   public boolean findById();
 
   public boolean findByLogin();
+
+  public boolean findByOnlyLogin();
 
   public boolean insert();
   

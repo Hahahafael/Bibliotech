@@ -9,13 +9,25 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.dao.classes.DocumentoDAO;
+import model.dao.classes.EmprestadoDAO;
+import model.dao.classes.EmprestimoDAO;
+import model.dao.classes.UsuarioDAO;
+import model.entities.Documento;
+import model.entities.Emprestado;
+import model.entities.Emprestimo;
+import model.entities.Usuario;
 
 public class MakeLoanController {
   @FXML TextField loginUserLoan;
   @FXML TextField titleBookLoan;
+  @FXML Label statusField;
+  @FXML Button makeLoanButton;
+
 
   private Stage window;
   private Scene scene;
@@ -53,9 +65,6 @@ public class MakeLoanController {
    * @throws IOException if an error occurs while loading the FXML file from the home screen.
    */
   public void makeLoan(ActionEvent event) throws IOException {
-    String loginUser = loginUserLoan.getText();
-    String titleBook = titleBookLoan.getText();
-    System.out.println("Usuario: " + loginUser + "\n" + "Titulo: " + titleBook);
   }
 
   /**
@@ -65,6 +74,13 @@ public class MakeLoanController {
    */
   public void seachUserLoan(ActionEvent event) throws IOException {
     String loginUser = loginUserLoan.getText();
-    System.out.println(loginUser);
+    Usuario usuario = new Usuario(loginUser); 
+    UsuarioDAO usuarioDAO = new UsuarioDAO(usuario);
+    if (usuarioDAO.findByOnlyLogin()) {
+        statusField.setText(usuario.getStatusDaConta());
+    } else {
+        System.out.println("Usuário não encontrado!");
+    }
   }
+
 }

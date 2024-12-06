@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeLoanController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeLoanController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002349" height="96.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
       <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#returnPreviousPage" prefHeight="54.0" prefWidth="101.0" styleClass="blueButton" text="Voltar" textFill="WHITE">
@@ -24,7 +24,7 @@
       </Button>
       <AnchorPane layoutX="257.0" layoutY="165.0" prefHeight="492.0" prefWidth="861.0" style="-fx-background-color: #ECF0F1;">
          <children>
-            <TextField fx:id="loginUserLoan" layoutX="50.0" layoutY="85.0" prefHeight="42.0" prefWidth="424.0" styleClass="textField">
+            <TextField fx:id="loginUserLoan" layoutX="50.0" layoutY="85.0" onAction="#seachUserLoan" prefHeight="42.0" prefWidth="424.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -34,7 +34,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="titleBookLoan" layoutX="50.0" layoutY="185.0" prefHeight="42.0" prefWidth="784.0" styleClass="textField">
+            <TextField fx:id="titleBookLoan" layoutX="50.0" layoutY="185.0" onAction="#makeLoan" prefHeight="42.0" prefWidth="784.0" styleClass="textField">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
