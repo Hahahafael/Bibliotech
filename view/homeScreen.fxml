@@ -47,8 +47,8 @@
             <VBox prefHeight="398.0" prefWidth="550.0" />
          </content>
       </ScrollPane>
-      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#002349" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" width="301.0" />
-      <ImageView fx:id="imageViewHelp" fitHeight="505.0" fitWidth="290.0" layoutX="968.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#002349" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" visible="false" width="301.0" />
+      <ImageView fx:id="imageViewHelp" fitHeight="505.0" fitWidth="290.0" layoutX="968.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../img/ajuda1.png" />
          </image></ImageView>
