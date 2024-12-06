@@ -15,6 +15,7 @@ import model.Session;
 public class HomeScreenController {
     @FXML Button goToLoginScreen;
     @FXML Button goToChooseDocumentScreen;
+    @FXML Button goToMakeLoanScreen;
     @FXML ImageView imageViewHelp;
     @FXML Rectangle rectangleHelp;
     @FXML Button accountButton;
@@ -28,6 +29,7 @@ public class HomeScreenController {
             accountButton.setVisible(true);
             if (Session.getUsuarioLogado().getTipo().equals("Administrador")) {
                 goToChooseDocumentScreen.setVisible(true);
+                goToMakeLoanScreen.setVisible(true);
             }
         } 
     }
@@ -52,6 +54,19 @@ public class HomeScreenController {
    */
     public void goToChooseDocumentScreen(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/chooseDocument.fxml"));
+        window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+    }
+
+   /**
+   * go to make loan screen
+   * @param event the triggered event, usually a click on a button.
+   * @throws IOException if an error occurs while loading the FXML file from the home screen.
+   */
+    public void goToMakeLoanScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/makeLoanScreen.fxml"));
         window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         window.setScene(scene);
