@@ -1,21 +1,13 @@
 CREATE TABLE Usuario (
     id_usuario SERIAL PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    login VARCHAR(20) NOT NULL,
+    login VARCHAR(20) NOT NULL UNIQUE,
     senha VARCHAR(20) NOT NULL,
     email VARCHAR(40) NOT NULL,
     telefone CHAR(15),
     multa_acumulada DECIMAL(3, 2),
     status_da_conta VARCHAR(20),
     tipo VARCHAR(20)
-);
-
-CREATE TABLE Comentario (
-    id_comentario SERIAL PRIMARY KEY,
-    data_comentario DATE,
-    texto VARCHAR(255),
-    id_usuario INT,
-    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
 
 CREATE TABLE Categoria (
@@ -38,12 +30,14 @@ CREATE TABLE Documento (
     FOREIGN KEY (num_categoria) REFERENCES Categoria(numero)
 );
 
-CREATE TABLE Recebe (
-    id_comentario INT,
-    cod_documento VARCHAR(30),
-    PRIMARY KEY (id_comentario, cod_documento),
-    FOREIGN KEY (id_comentario) REFERENCES Comentario(id_comentario),
-    FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
+CREATE TABLE Comentario (
+    id_comentario SERIAL PRIMARY KEY,
+    data_comentario DATE,
+    texto VARCHAR(255),
+    id_usuario INT,
+	cod_documento VARCHAR(30),
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),
+	FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
 );
 
 CREATE TABLE Autor (
@@ -68,18 +62,10 @@ CREATE TABLE Emprestimo (
     status VARCHAR(20),
     quant_renovacao INT,
     id_usuario INT,
-    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
-);
-
-CREATE TABLE Emprestado (
-    cod_emprestimo INT,
-    cod_documento VARCHAR(30),
-    PRIMARY KEY (cod_emprestimo, cod_documento),
-    FOREIGN KEY (cod_emprestimo) REFERENCES Emprestimo(cod_emprestimo),
-    FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
+	cod_documento VARCHAR(30),
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),
+	FOREIGN KEY (cod_documento) REFERENCES Documento(cod_documento)
 );
 
 INSERT INTO Usuario
 VALUES (0,'admin','admin','123','admin@email.com', null, null,'Ativo','Administrador');
-
-

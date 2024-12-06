@@ -9,14 +9,16 @@ public class Emprestimo {
     private String status;
     private int quantRenovacao;
     private Usuario usuario;
+    private Documento documento;
 
-    public Emprestimo(int id, DateFormat dataRetirada, DateFormat dataDevolucao, String status, int quantRenovacao, Usuario usuario) {
+    public Emprestimo(int id, DateFormat dataRetirada, DateFormat dataDevolucao, String status, int quantRenovacao, Usuario usuario, Documento documento) {
         this.id = id;
         this.dataRetirada = dataRetirada;
         this.dataDevolucao = dataDevolucao;
         this.status = status;
         this.quantRenovacao = quantRenovacao;
         this.usuario = usuario;
+        this.documento = documento;
     }
 
     public int getId() {
@@ -65,5 +67,13 @@ public class Emprestimo {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public Documento getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(Documento documento) {
+        this.documento = documento;
     }
 }

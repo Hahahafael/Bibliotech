@@ -14,11 +14,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.dao.classes.DocumentoDAO;
-import model.dao.classes.EmprestadoDAO;
 import model.dao.classes.EmprestimoDAO;
 import model.dao.classes.UsuarioDAO;
 import model.entities.Documento;
-import model.entities.Emprestado;
 import model.entities.Emprestimo;
 import model.entities.Usuario;
 

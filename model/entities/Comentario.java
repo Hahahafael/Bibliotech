@@ -7,12 +7,14 @@ public class Comentario {
     private DateFormat data;
     private String texto;
     private Usuario usuario;
+    private Documento documento;
 
-    public Comentario(int id, DateFormat data, String texto, Usuario usuario) {
+    public Comentario(int id, DateFormat data, String texto, Usuario usuario, Documento documento) {
         this.id = id;
         this.data = data;
         this.texto = texto;
         this.usuario = usuario;
+        this.documento = documento;
     }
 
     public int getId() {
@@ -45,5 +47,13 @@ public class Comentario {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public Documento getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(Documento documento) {
+        this.documento = documento;
     }
 }
