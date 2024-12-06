@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeScreenController">
    <children>
       <TextField layoutX="408.0" layoutY="286.0" prefHeight="45.0" prefWidth="434.0" promptText="Busque por palavra-chave" stylesheets="@../styles/styleOfTheSearchBar.css">
          <cursor>
@@ -47,8 +47,11 @@
             <VBox prefHeight="398.0" prefWidth="550.0" />
          </content>
       </ScrollPane>
-      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#002349" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" visible="false" width="301.0" />
-      <ImageView fx:id="imageViewHelp" fitHeight="505.0" fitWidth="290.0" layoutX="968.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <Rectangle fx:id="rectangleHelp" arcHeight="5.0" arcWidth="5.0" fill="#002349" height="512.0" layoutX="962.0" layoutY="176.0" stroke="BLACK" strokeType="OUTSIDE" width="301.0" />
+      <ImageView fx:id="imageViewHelp" fitHeight="505.0" fitWidth="290.0" layoutX="968.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ajuda1.png" />
+         </image></ImageView>
       <Button fx:id="goToChooseDocumentScreen" layoutX="1092.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToChooseDocumentScreen" prefHeight="73.0" prefWidth="150.0" styleClass="goldButton" text="Cadastrar Documento" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
          <font>
             <Font size="15.0" />
